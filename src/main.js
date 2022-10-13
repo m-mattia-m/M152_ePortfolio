@@ -1,15 +1,16 @@
-import './style.scss'
+import Alpine from 'alpinejs';
+import $ from 'jquery';
+
+// styles
+import './style.scss';
 
 // Menu-animation
+var menuVisibility = false;
+const header = $('header');
 
-var menuVisibility = false
-$(document).ready(function() {
+const initApp = () => {
+  window.Alpine = Alpine;
+  Alpine.start();
+};
 
-})
-
-$(document).ready(function() {
-    console.log("document ready")
-        // $(body).scroll(function() {
-        //     console.log("scroll")
-        // });
-});
+initApp();
