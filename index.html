@@ -14,12 +14,14 @@
 
     <!-- Code -->
     <header>
-        <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo">
-        <nav>
-            <span class="nav-links">Home</span>
-            <span class="nav-links">About</span>
-            <span class="nav-links">Interested</span>
-        </nav>
+        <header-nav>
+            <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo">
+            <nav>
+                <span class="nav-links">Home</span>
+                <span class="nav-links">About</span>
+                <span class="nav-links">Interested</span>
+            </nav>
+        </header-nav>
     </header>
     <!-- <header></header> -->
     <main>
@@ -40,7 +42,7 @@
             <question-one>
                 <question-one-description>
                     <h1 class="w-full">Was ist SocialChat?</h1>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                         no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </question-one-description>
@@ -54,13 +56,14 @@
                 </question-two-image>
                 <question-two-description>
                     <h1 class="w-full ">Was kann SocialChat?</h1>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                         no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </question-two-description>
             </question-two>
         </description>
-        <about>
+        <about class="h-screen w-full flex flex-row">
+            <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </about>
         <interested class="h-screen w-full flex flex-col">
@@ -96,15 +99,29 @@
             <a href="tel:+41 79 505 48 28">+41 79 505 48 28</a>
             <a href="mailto:hi@socialchat.io">hi@socialchat.io</a>
         </footer-contact>
+        <footer-border>
+            <vl></vl>
+        </footer-border>
         <footer-links>
             <h3>Links</h3>
-            <span class="nav-links">Home</span>
-            <span class="nav-links">About</span>
-            <span class="nav-links">Interested</span>
+            <span class="nav-links">Startseite</span>
+            <span class="nav-links">Was ist SocialChat?</span>
+            <span class="nav-links">Was kann SocialChat?</span>
+            <span class="nav-links">Über SocialChat?</span>
+            <span class="nav-links">Interessiert</span>
         </footer-links>
-        <div>
+        <footer-border>
+            <vl></vl>
+        </footer-border>
+        <footer-socialmedia>
             <h3>Social Media</h3>
-        </div>
+            <socialmedia-icons>
+                <a href="https://google.com/" target="_blank" rel="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://google.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://google.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://google.com/" target="_blank" rel="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </socialmedia-icons>
+        </footer-socialmedia>
     </footer>
 
     <script type="library " src="alpine.js "></script>
