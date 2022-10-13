@@ -1,5 +1,5 @@
-@import url("./node_modules/normalize.css/normalize.css");
-@import url("./node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+@import url("../node_modules/normalize.css/normalize.css");
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,6 +35,11 @@ h3,
 
 p {
     @apply mb-1;
+}
+
+site-headline,
+.site-headline {
+    @apply text-secondary;
 }
 
 header-nav,
@@ -115,19 +120,15 @@ about,
 interested,
 .interested {
     @apply px-12;
-}
-
-description>*,
-.description>* {
-    @apply w-1/2;
+    @apply mt-20;
 }
 
 iframe,
 .iframe {
-    width: calc(100% - 3em);
-    height: calc(100vh - 20em);
-    @apply pl-12;
-    // @apply w-full;
+    // width: calc(100% - 3em);
+    // height: calc(100vh - 20em);
+    @apply w-full;
+    @apply h-[36rem];
 }
 
 form,
@@ -218,4 +219,30 @@ socialmedia-icons,
     @apply flex;
     @apply w-full;
     @apply justify-between;
+}
+
+question-image,
+.question-image {
+    display: block;
+}
+
+padding-left,
+.padding-left {
+    @apply pl-6;
+}
+
+padding-right,
+.padding-right {
+    @apply pr-6;
+}
+
+padding-top,
+.padding-top {
+    @apply pt-20;
+}
+
+question-image-container,
+.question-image-container {
+    @apply flex;
+    @apply justify-center;
 }
