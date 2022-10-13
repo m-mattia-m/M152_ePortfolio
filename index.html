@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ePortfolio</title>
+    <title>SocialChat</title>
 
     <link rel="stylesheet" href="style.scss" />
 </head>
@@ -13,8 +13,102 @@
 <body>
 
     <!-- Code -->
+    <header>
+        <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo">
+        <nav>
+            <span class="nav-links">Home</span>
+            <span class="nav-links">About</span>
+            <span class="nav-links">Interested</span>
+        </nav>
+    </header>
+    <!-- <header></header> -->
+    <main>
+        <home class="w-full h-full flex flex-row bg-primary text-[#ffffff]">
+            <!-- grid grid-cols-2 -->
+            <home-title>
+                <home-title-content>
+                    <h1 class="text-7xl text-left">SocialChat</h1>
+                    <p class="text-left">Unite your social media chats.</p>
+                    <span class="bg-secondary px-10 py-6 cursor-pointer">Read more</span>
+                </home-title-content>
+            </home-title>
+            <home-logo>
+                <img src="./assets/logo-white-box.png " alt="SocialChat-Logo">
+            </home-logo>
+        </home>
+        <description class="h-screen w-full flex flex-row">
+            <question-one>
+                <question-one-description>
+                    <h1 class="w-full">Was ist SocialChat?</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </question-one-description>
+                <question-one-image>
+                    <img src="./assets/logo-blue-box.png" alt="">
+                </question-one-image>
+            </question-one>
+            <question-two>
+                <question-two-image>
+                    <img src="./assets/logo-blue-box.png " alt="">
+                </question-two-image>
+                <question-two-description>
+                    <h1 class="w-full ">Was kann SocialChat?</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </question-two-description>
+            </question-two>
+        </description>
+        <about>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </about>
+        <interested class="h-screen w-full flex flex-col">
+            <h1>Bist du interessiert an SocialChat?</h1>
+            <form (ngSubmit)="onSubmit()" #form="ngForm">
+                <form-row>
+                    <input type="text" placeholder="Vorname">
+                    <span class="w-16"></span>
+                    <input type="text" placeholder="Nachname">
+                </form-row>
+                <form-row>
+                    <input type="email" placeholder="Email">
+                </form-row>
+                <form-row>
+                    <input type="tel" placeholder="Telefon">
+                </form-row>
+                <form-row>
+                    <input type="text" placeholder="Firma">
+                </form-row>
+                <form-row>
+                    <button>Eintragen</button>
+                </form-row>
+            </form>
+        </interested>
+    </main>
+    <footer>
+        <footer-contact>
+            <h3>Kontakt</h3>
+            <p>Mattia Mügger</p>
+            <p>Hinterdorfstrasse 10</p>
+            <p>CH-9524 Zuzwil SG</p>
+            <br>
+            <a href="tel:+41 79 505 48 28">+41 79 505 48 28</a>
+            <a href="mailto:hi@socialchat.io">hi@socialchat.io</a>
+        </footer-contact>
+        <footer-links>
+            <h3>Links</h3>
+            <span class="nav-links">Home</span>
+            <span class="nav-links">About</span>
+            <span class="nav-links">Interested</span>
+        </footer-links>
+        <div>
+            <h3>Social Media</h3>
+        </div>
+    </footer>
 
-    <script type="module" src="main.js"></script>
+    <script type="library " src="alpine.js "></script>
+    <script type="module " src="main.js "></script>
 </body>
 
 </html>
