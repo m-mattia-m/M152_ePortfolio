@@ -1,0 +1,29 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+      - dev
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Configure Node
+        uses: actions/setup-node@1
+        with:
+          node-version: '16.14.0'
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy 🚀
+        uses: m-mattia-m/github-pages-deploy-action@v4
+        with:
+          branch: dev       # The branch the action should deploy to.
+          # folder: build     # The folder the action should deploy.
