@@ -12,10 +12,10 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
-      # - name: Configure Node
-      #   uses: actions/setup-node@1
-      #   with:
-      #     node-version: '16.14.0'
+      - name: Configure Node
+        uses: actions/setup-node@1
+        with:
+          node-version: 'v16.14.0'
 
       - name: Install and Build
         run: |
@@ -23,7 +23,7 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        uses: m-mattia-m/github-pages-deploy-action@v4
+        uses: m-mattia-m/M152_ePortfolio@v4
         with:
           branch: dev       # The branch the action should deploy to.
           # folder: build     # The folder the action should deploy.
