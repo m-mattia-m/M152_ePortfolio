@@ -25,6 +25,12 @@ module.exports = {
                 secondary: '#FB8500',
                 tertiary: '#023047',
             },
+            margin: {
+                sitedefault: '6rem',
+            },
+            padding: {
+                sitedefault: '6rem',
+            }
         },
     },
     plugins: [],

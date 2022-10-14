@@ -1,11 +1,10 @@
 @import url("normalize.css/normalize.css");
 @import url("@fortawesome/fontawesome-free/css/all.min.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-[x-cloak] { 
+$margin-space: 32;
+[x-cloak] {
     @apply hidden;
 }
 
@@ -54,7 +53,7 @@ header-nav,
     @apply flex-row;
     @apply h-16;
     @apply py-3;
-    @apply px-12;
+    @apply px-sitedefault;
 }
 
 .nav-links {
@@ -87,8 +86,9 @@ home-title,
     @apply w-2/4;
     @apply h-screen;
     @apply flex;
-    @apply flex-row;
-    @apply items-center;
+    @apply flex-col;
+    @apply justify-center;
+    @apply ml-sitedefault;
 }
 
 home-title-content,
@@ -96,7 +96,7 @@ home-title-content,
     @apply w-full;
     @apply flex;
     @apply flex-col;
-    @apply items-center;
+    @apply items-start;
     @apply justify-center;
 }
 
@@ -112,6 +112,8 @@ home-logo,
     @apply flex;
     @apply flex-row;
     @apply items-center;
+    @apply justify-end;
+    @apply mr-sitedefault;
 }
 
 home-logo>*,
@@ -125,7 +127,7 @@ about,
 .about,
 interested,
 .interested {
-    @apply px-12;
+    @apply px-sitedefault;
     @apply mt-20;
 }
 
@@ -179,7 +181,7 @@ footer,
     @apply flex;
     @apply flex-row;
     @apply justify-between;
-    @apply px-12;
+    @apply px-sitedefault;
     @apply py-12;
     @apply bg-primary;
     @apply text-tertiary;
@@ -245,6 +247,11 @@ padding-right,
 padding-top,
 .padding-top {
     @apply pt-20;
+}
+
+margin-top,
+.margin-top {
+    @apply mt-20;
 }
 
 question-image-container,

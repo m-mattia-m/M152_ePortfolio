@@ -16,8 +16,7 @@
     <div id="app" x-cloak x-data="homeComponent">
         <header x-ref="header">
             <header-nav>
-                <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo cursor-pointer"
-                    @click="onLogoClick" />
+                <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo cursor-pointer" @click="onLogoClick" />
                 <nav>
                     <span class="nav-links">Home</span>
                     <span class="nav-links">About</span>
@@ -33,8 +32,7 @@
                     <home-title-content>
                         <h1 class="text-7xl text-left">SocialChat</h1>
                         <p class="text-left">Unite your social media chats.</p>
-                        <button class="bg-secondary px-10 py-6 cursor-pointer"
-                            @click="onReadMoreClick($event, $refs.about, $refs.header)">
+                        <button class="bg-secondary px-10 py-6 cursor-pointer" @click="onReadMoreClick($event, $refs.about, $refs.header)">
                             Read more
                         </button>
                     </home-title-content>
@@ -49,39 +47,25 @@
                         <question-one-description class="w-1/2 padding-right">
                             <h1 class="w-full site-headline">Was ist SocialChat?</h1>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                                sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                                sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                             </p>
                         </question-one-description>
                         <question-one-image class="w-1/2 padding-left question-image-container">
                             <img src="./assets/gradient.png" alt="" class="question-image" />
                         </question-one-image>
                     </question-one>
-                    <question-two class="flex flex-row w-full padding-top">
+                    <question-two class="flex flex-row w-full margin-top">
                         <question-two-image class="w-1/2 padding-right question-image-container">
                             <img src="./assets/gradient.png" alt="" class="question-image" />
                         </question-two-image>
                         <question-two-description class="w-1/2 padding-left">
                             <h1 class="w-full site-headline">Was kann SocialChat?</h1>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                                sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                nonumy eirmod tempor invidunt ut labore et dolore magna
-                                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                                sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                             </p>
                         </question-two-description>
                     </question-two>
@@ -91,9 +75,7 @@
                 <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
                 <h1 class="w-full site-headline">Über uns</h1>
                 <!-- rename it to: The Problem | Das Problem-->
-                <iframe src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </about>
             <interested class="w-full flex flex-col">
                 <h1 class="w-full site-headline">
@@ -120,7 +102,7 @@
                 </form>
             </interested>
         </main>
-        <footer>
+        <footer class="margin-top">
             <footer-contact>
                 <h3>Kontakt</h3>
                 <p>Mattia Mügger</p>
