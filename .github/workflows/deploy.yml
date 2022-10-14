@@ -2,7 +2,6 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
       - dev
 jobs:
   build-and-deploy:
@@ -22,8 +21,63 @@ jobs:
           npm ci
           npm run build
 
-      # - name: Deploy 🚀
-      #   uses: m-mattia-m/M152_ePortfolio@v4
-      #   with:
-      #     branch: dev       # The branch the action should deploy to.
-      #     # folder: build     # The folder the action should deploy.
+      - name: Deploy 🚀
+        uses: m-mattia-m/M152_ePortfolio@v4
+        with:
+          branch: dev       # The branch the action should deploy to.
+          folder: dist     # The folder the action should deploy. -> In which file you save the build
+
+          name: Run Tests
+
+
+#
+# =========================================
+# 
+
+
+
+#
+# Create some files with script/new-artifact.sh and confirm they are properly packaged and uploaded
+# as artifacts with the actions.
+#
+# This is tested on all OS platforms where we have hosted runners.
+#
+name: Build and Deploy on Pages
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Generate files
+      run: mkdir artifact && mkdir artifact2 && cd artifact && ../script/new-artifact.sh
+      shell: bash
+
+    - name: Upload Pages artifact
+      uses: ./
+      with:
+        path: artifact
+
+    - name: Download artifact
+      uses: actions/download-artifact@v3
+      with:
+          name: github-pages
+          path: artifact2
+
+    - name: Extract artifact
+      run: tar -xf artifact2/artifact.tar -C artifact2 && rm artifact2/artifact.tar
+      shell: bash
+
+    - name: Compare files
+      run: diff -qr artifact artifact2
+      shell: bash
+
+    - name: Check for absence of symlinks
+      run: if [ $(find artifact2 -type l | wc -l) != 0 ]; then echo "Symlinks found"; exit 1; fi
+      shell: bash
