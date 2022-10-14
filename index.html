@@ -8,122 +8,144 @@
     <title>SocialChat</title>
 
     <link rel="stylesheet" href="./src/style.scss" />
+
+    <script type="module" src="./src/app.js"></script>
 </head>
 
 <body>
-    <!-- Code -->
-    <header>
-        <header-nav>
-            <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo">
-            <nav>
-                <span class="nav-links">Home</span>
-                <span class="nav-links">About</span>
-                <span class="nav-links">Interested</span>
-            </nav>
-        </header-nav>
-    </header>
-    <!-- <header></header> -->
-    <main>
-        <home class="w-full flex flex-row bg-primary text-white">
-            <!-- grid grid-cols-2 -->
-            <home-title>
-                <home-title-content>
-                    <h1 class="text-7xl text-left">SocialChat</h1>
-                    <p class="text-left">Unite your social media chats.</p>
-                    <span class="bg-secondary px-10 py-6 cursor-pointer">Read more</span>
-                </home-title-content>
-            </home-title>
-            <home-logo>
-                <img src="./assets/logo-white-box.png" alt="SocialChat-Logo">
-            </home-logo>
-        </home>
-        <description class="w-full flex flex-col">
-            <question-one class="flex flex-row w-full">
-                <question-one-description class="w-1/2 padding-right">
-                    <h1 class="w-full site-headline">Was ist SocialChat?</h1>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </question-one-description>
-                <question-one-image class="w-1/2 padding-left question-image-container">
-                    <img src="./assets/gradient.png" alt="" class="question-image">
-                </question-one-image>
-            </question-one>
-            <question-two class="flex flex-row w-full padding-top">
-                <question-two-image class="w-1/2 padding-right question-image-container">
-                    <img src="./assets/gradient.png" alt="" class="question-image">
-                </question-two-image>
-                <question-two-description class="w-1/2 padding-left">
-                    <h1 class="w-full site-headline">Was kann SocialChat?</h1>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </question-two-description>
-            </question-two>
-        </description>
-        <about class="w-full flex flex-col">
-            <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
-            <h1 class="w-full site-headline">Über uns</h1>
-            <!-- rename it to: The Problem | Das Problem-->
-            <iframe src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </about>
-        <interested class="w-full flex flex-col">
-            <h1 class="w-full site-headline">Bist du interessiert an SocialChat?</h1>
-            <form (ngSubmit)="onSubmit()" #form="ngForm">
-                <form-row>
-                    <input type="text" placeholder="Vorname">
-                    <span class="w-16"></span>
-                    <input type="text" placeholder="Nachname">
-                </form-row>
-                <form-row>
-                    <input type="email" placeholder="Email">
-                </form-row>
-                <form-row>
-                    <input type="tel" placeholder="Telefon">
-                </form-row>
-                <form-row>
-                    <input type="text" placeholder="Firma">
-                </form-row>
-                <form-row>
-                    <button>Eintragen</button>
-                </form-row>
-            </form>
-        </interested>
-    </main>
-    <footer>
-        <footer-contact>
-            <h3>Kontakt</h3>
-            <p>Mattia Mügger</p>
-            <p>Hinterdorfstrasse 10</p>
-            <p>CH-9524 Zuzwil SG</p>
-            <br>
-            <a href="tel:+41 79 505 48 28">+41 79 505 48 28</a>
-            <a href="mailto:hi@socialchat.io">hi@socialchat.io</a>
-        </footer-contact>
-        <footer-border>
-            <vl></vl>
-        </footer-border>
-        <footer-links>
-            <h3>Links</h3>
-            <span class="nav-links">Startseite</span>
-            <span class="nav-links">Was ist SocialChat?</span>
-            <span class="nav-links">Was kann SocialChat?</span>
-            <span class="nav-links">Über SocialChat?</span>
-            <span class="nav-links">Interessiert</span>
-        </footer-links>
-        <footer-border>
-            <vl></vl>
-        </footer-border>
-        <footer-socialmedia>
-            <h3>Social Media</h3>
-            <socialmedia-icons>
-                <a href="https://google.com/" target="_blank" rel="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://google.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://google.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://google.com/" target="_blank" rel="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            </socialmedia-icons>
-        </footer-socialmedia>
-    </footer>
+    <div id="app" x-cloak x-data="homeComponent">
+        <header x-ref="header">
+            <header-nav>
+                <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo cursor-pointer" @click="onLogoClick" />
+                <nav>
+                    <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Home</span>
+                    <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Description</span>
+                    <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">About</span>
+                    <span class="nav-links" @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interested</span>
+                </nav>
+            </header-nav>
+        </header>
+        <!-- <header></header> -->
+        <main>
+            <section id="home" x-ref="home">
+                <home class="w-full flex flex-row bg-primary text-white">
+                    <!-- grid grid-cols-2 -->
+                    <home-title>
+                        <home-title-content>
+                            <h1 class="text-7xl text-left">SocialChat</h1>
+                            <p class="text-left">Unite your social media chats.</p>
+                            <button class="bg-secondary px-10 py-6 cursor-pointer" @click="onReadMoreClick($event, $refs.about, $refs.header)">
+                            Read more
+                        </button>
+                        </home-title-content>
+                    </home-title>
+                    <home-logo>
+                        <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" />
+                    </home-logo>
+                </home>
+            </section>
+            <section id="description" x-ref="description">
+                <description class="w-full flex flex-col">
+                    <question-one class="flex flex-row w-full">
+                        <question-one-description class="w-1/2 padding-right">
+                            <h1 class="w-full site-headline">Was ist SocialChat?</h1>
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            </p>
+                        </question-one-description>
+                        <question-one-image class="w-1/2 padding-left question-image-container">
+                            <img src="./assets/gradient.png" alt="" class="question-image" />
+                        </question-one-image>
+                    </question-one>
+                    <question-two class="flex flex-row w-full margin-top">
+                        <question-two-image class="w-1/2 padding-right question-image-container">
+                            <img src="./assets/gradient.png" alt="" class="question-image" />
+                        </question-two-image>
+                        <question-two-description class="w-1/2 padding-left">
+                            <h1 class="w-full site-headline">Was kann SocialChat?</h1>
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            </p>
+                        </question-two-description>
+                    </question-two>
+                </description>
+            </section>
+            <section id="about" x-ref="about">
+                <about class="w-full flex flex-col">
+                    <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
+                    <h1 class="w-full site-headline">Über uns</h1>
+                    <!-- rename it to: The Problem | Das Problem-->
+                    <iframe src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </about>
+            </section>
+            <section id="interested" x-ref="interested">
+                <interested class="w-full flex flex-col">
+                    <h1 class="w-full site-headline">
+                        Bist du interessiert an SocialChat?
+                    </h1>
+                    <form x-data="formComponent">
+                        <form-row>
+                            <input type="text" placeholder="Vorname" x-model="form.firstname" />
+                            <span class="w-16"></span>
+                            <input type="text" placeholder="Nachname" x-model="form.lastname" />
+                        </form-row>
+                        <form-row>
+                            <input type="email" placeholder="Email" x-model="form.email" />
+                        </form-row>
+                        <form-row>
+                            <input type="tel" placeholder="Telefon" x-model="form.telephone" />
+                        </form-row>
+                        <form-row>
+                            <input type="text" placeholder="Firma" x-model="form.company" />
+                        </form-row>
+                        <form-row>
+                            <button @click.prevent="onFormSubmit">Eintragen</button>
+                        </form-row>
+                    </form>
+                </interested>
+            </section>
+        </main>
+        <footer class="margin-top">
+            <footer-contact>
+                <h3>Kontakt</h3>
+                <p>Mattia Mügger</p>
+                <p>Hinterdorfstrasse 10</p>
+                <p>CH-9524 Zuzwil SG</p>
+                <br />
+                <a href="tel:+41 79 505 48 28">+41 79 505 48 28</a>
+                <a href="mailto:hi@socialchat.io">hi@socialchat.io</a>
+            </footer-contact>
+            <footer-border>
+                <vl></vl>
+            </footer-border>
+            <footer-links>
+                <h3>Links</h3>
+                <span class="nav-links">Startseite</span>
+                <span class="nav-links">Was ist SocialChat?</span>
+                <span class="nav-links">Was kann SocialChat?</span>
+                <span class="nav-links">Über SocialChat?</span>
+                <span class="nav-links">Interessiert</span>
+            </footer-links>
+            <footer-border>
+                <vl></vl>
+            </footer-border>
+            <footer-socialmedia>
+                <h3>Social Media</h3>
+                <socialmedia-icons>
+                    <a href="https://google.com/" target="_blank" rel="Linkedin"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://google.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://google.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://google.com/" target="_blank" rel="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </socialmedia-icons>
+            </footer-socialmedia>
+        </footer>
+    </div>
 
     <script type="module" src="./src/main.js"></script>
 </body>
