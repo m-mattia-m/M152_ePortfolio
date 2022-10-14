@@ -1,38 +1,42 @@
-name: Build and Deploy on Pages
+name: CI
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install
+        run: |
+          npm ci
+      - name: Build
+        run: |
+          npm run build
+      - name: Publish
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist/
 
-    - name: Generate files
-      run: mkdir artifact && mkdir artifact2 && cd artifact && ../script/new-artifact.sh
-      shell: bash
-
-    - name: Upload Pages artifact
-      uses: ./
-      with:
-        path: artifact
-
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-          name: github-pages
-          path: artifact2
-
-    - name: Extract artifact
-      run: tar -xf artifact2/artifact.tar -C artifact2 && rm artifact2/artifact.tar
-      shell: bash
-
-    - name: Compare files
-      run: diff -qr artifact artifact2
-      shell: bash
-
-    - name: Check for absence of symlinks
-      run: if [ $(find artifact2 -type l | wc -l) != 0 ]; then echo "Symlinks found"; exit 1; fi
-      shell: bash
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          artifact_name: github-pages
