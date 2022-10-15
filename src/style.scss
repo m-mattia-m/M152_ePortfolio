@@ -58,7 +58,7 @@ header-nav,
 
 .nav-links {
     @apply cursor-pointer;
-    @apply px-2;
+    @apply pl-2;
 }
 
 nav,
@@ -70,16 +70,28 @@ nav,
     @apply space-x-3;
     @apply h-auto;
     @apply items-center;
-    @apply text-[#ffffff];
+    @apply text-white;
     @apply text-2xl;
     @apply font-thin;
+    @apply delay-100;
 }
 
 header,
 .header {
-    @apply bg-primary; // 219EBC
+    @apply bg-primary; // bg-tertiary
+    @apply delay-100;
     @apply w-full;
     @apply fixed;
+}
+
+.header-scroll {
+    @apply bg-white;
+    @apply delay-100;
+}
+
+.nav-links-scroll {
+    @apply text-tertiary;
+    @apply delay-100;
 }
 
 home-title,
