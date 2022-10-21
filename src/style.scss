@@ -644,6 +644,17 @@ form-spacing,
 }
 
 @media (max-width: 640px) {
+    footer>*,
+    .footer>* {
+        @apply w-full;
+    }
+
+    footer,
+    .footer {
+        @apply flex-col;
+        @apply px-mobile;
+    }
+
     question-image-container,
     .question-image-container {
         @apply w-full;
@@ -711,4 +722,22 @@ form-spacing,
         @apply w-full;
         @apply pl-8;
     }
+
+    footer-border>*,
+    .footer-border>* {
+        @apply hidden;
+    }
+
+    footer-border,
+    .footer-border {
+        @apply py-6;
+    }
+
+    socialmedia-icons,
+    .socialmedia-icons {
+        @apply flex;
+        @apply w-1/2;
+        @apply justify-between;
+    }
+
 }
