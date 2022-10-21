@@ -44,6 +44,11 @@ window.homeComponent = () => {
             const headerHeight = header.clientHeight;
             const padding = 30;
 
+            Array.from(document.querySelectorAll('.nav-open-menu')).forEach((el) => el.classList.remove('nav-open-menu'));
+            Array.from(document.querySelectorAll('.responsive-nav-container-open-menu')).forEach((el) => el.classList.remove('responsive-nav-container-open-menu'));
+            Array.from(document.querySelectorAll('.menu-close-show')).forEach((el) => el.classList.remove('menu-close-show'));  
+            Array.from(document.querySelectorAll('.hide-site-nav')).forEach((el) => el.classList.remove('hide-site-nav'));  
+
             /**
              * @type ScrollToOptions
              */
@@ -53,6 +58,30 @@ window.homeComponent = () => {
             };
 
             scrollTo(scrollToOptions);
+        },
+        /**
+         * openMenu
+         * @param {MouseEvent} $event
+         */
+        openMenu($event) {
+            console.log("menu click");
+
+            document.getElementById("nav").classList.add("nav-open-menu");
+            document.getElementById("responsive-nav-container").classList.add("responsive-nav-container-open-menu");
+            document.getElementById("menu-close").classList.add("menu-close-show");    
+            document.getElementById("site-nav").classList.add("hide-site-nav");    
+        },
+        /**
+         * closeMenu
+         * @param {MouseEvent} $event
+         */
+         closeMenu($event) {
+            console.log("menu click close");
+
+            Array.from(document.querySelectorAll('.nav-open-menu')).forEach((el) => el.classList.remove('nav-open-menu'));
+            Array.from(document.querySelectorAll('.responsive-nav-container-open-menu')).forEach((el) => el.classList.remove('responsive-nav-container-open-menu'));
+            Array.from(document.querySelectorAll('.menu-close-show')).forEach((el) => el.classList.remove('menu-close-show'));  
+            Array.from(document.querySelectorAll('.hide-site-nav')).forEach((el) => el.classList.remove('hide-site-nav'));  
         },
     };
 };

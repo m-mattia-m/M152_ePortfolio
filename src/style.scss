@@ -45,6 +45,7 @@ p {
 site-headline,
 .site-headline {
     @apply text-secondary;
+    @apply w-full;
 }
 
 header-nav,
@@ -59,6 +60,11 @@ header-nav,
 .nav-links {
     @apply cursor-pointer;
     @apply pl-2;
+}
+
+nav-logo,
+.nav-logo {
+    @apply cursor-pointer;
 }
 
 nav,
@@ -123,16 +129,20 @@ circle,
     @apply flex;
     @apply hover:w-8;
     @apply hover:delay-primary;
-    // @apply transition ease-in-out delay-150 hover:translate-y-1 hover:scale-100;
-    // @apply transition;
-    // @apply ease-in-out;
-    // @apply hover:-translate-x-1;
-    //  ease-in-out delay-150 hover:translate-1
 }
 
 current-section,
 .current-section {
     @apply w-8;
+}
+
+home, 
+.home {
+    @apply w-full;
+    @apply flex;
+    @apply flex-row;
+    @apply bg-primary;
+    @apply text-white;
 }
 
 home-title,
@@ -158,6 +168,27 @@ home-title-content>*,
 .home-title-content>* {
     @apply pt-4;
     @apply pb-4;
+    @apply text-left
+}
+
+home-title-content>h1,
+.home-title-content>h1 {
+    @apply text-7xl;
+}
+
+home-title-content>button,
+.home-title-content>button {
+    @apply bg-secondary;
+    @apply text-center;
+    @apply px-10;
+    @apply py-6;
+    @apply cursor-pointer;
+    @apply transition;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply hover:-translate-x-1;
+    @apply hover:-translate-y-1;
+    @apply hover:scale-110;
 }
 
 home-logo,
@@ -183,6 +214,29 @@ interested,
 .interested {
     @apply px-sitedefault;
     @apply mt-20;
+    @apply w-full;
+    @apply flex;
+    @apply flex-col;
+}
+
+question,
+.question {
+    @apply flex-row;
+}
+
+question-description,
+.question-description {
+    @apply w-1/2;
+}
+
+question-description>p,
+.question-description>p {
+    @apply text-justify;
+}
+
+question-two,
+.question-two {
+    @apply margin-top;
 }
 
 iframe,
@@ -285,7 +339,7 @@ socialmedia-icons,
 
 question-image,
 .question-image {
-    display: block;
+    @apply block;
 }
 
 padding-left,
@@ -312,4 +366,166 @@ question-image-container,
 .question-image-container {
     @apply flex;
     @apply justify-center;
+    @apply w-1/2;
+}
+
+alert,
+.alert {
+    @apply fixed;
+    @apply top-24;
+    @apply right-4;
+    @apply w-96;
+}
+
+alert-container,
+.alert-container {
+    @apply border;
+    @apply px-4;
+    @apply py-3;
+    @apply rounded;
+    @apply relative
+
+}
+
+alert-success-container,
+.alert-success-container {
+    @apply bg-green-100;
+    @apply border-green-400;
+    @apply text-green-700;
+}
+
+alert-error-container,
+.alert-error-container {
+    @apply bg-red-100;
+    @apply border-red-400;
+    @apply text-red-700;
+}
+
+burger,
+.burger {
+    @apply hidden;
+}
+
+burger-bar,
+.burger-bar {
+    @apply bg-white;
+    @apply h-1.5;
+    @apply w-7;
+    @apply flex;
+    @apply hidden;
+}
+
+burger-bar-scroll,
+.burger-bar-scroll {
+    @apply bg-primary;
+}
+
+menu-close,
+.menu-close,
+#menu-close {
+    @apply fixed;
+    @apply right-sitedefault;
+    @apply flex;
+    @apply top-2;
+    @apply text-5xl;
+}
+
+
+
+// ------------------------------
+
+@media (max-width: 768px) {
+
+    responsive-nav-container-open-menu,
+    .responsive-nav-container-open-menu {
+        @apply flex;
+        @apply flex-col;
+        @apply h-full;
+        @apply justify-center;
+        @apply text-center;
+        @apply justify-around;
+        @apply py-60;
+    }
+
+    header-nav,
+    .header-nav {
+        @apply justify-between;
+    }
+
+    burger,
+    .burger {
+        @apply h-full;
+        @apply w-6;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-around;
+        @apply items-end;
+    }
+    
+    burger-bar,
+    .burger-bar {
+        @apply bg-white;
+        @apply h-1.5;
+        @apply w-7;
+        @apply flex;
+    }
+
+    .nav-links {
+        @apply cursor-pointer;
+        @apply pl-2;
+    }
+
+    nav-links-scroll,
+    .nav-links-scroll {
+        @apply text-white;
+    }
+
+    nav,
+    .nav {
+        @apply hidden;
+    }
+    
+    nav-open-menu,
+    .nav-open-menu {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-around;
+        @apply items-center;
+        
+        @apply h-screen;
+        @apply w-screen;
+        @apply bg-primary;
+        @apply text-white;
+        @apply text-2xl;
+
+        @apply fixed;
+        @apply top-0;
+        @apply left-0;
+    }
+
+    menu-close-show,
+    .menu-close-show {
+        @apply flex;
+    }
+    
+    header,
+    .header {
+        @apply bg-primary; // bg-tertiary
+        @apply delay-primary;
+        @apply w-full;
+        @apply fixed;
+    }
+
+    home-logo,
+    .home-logo {
+        @apply hidden;
+    }
+    
+    hide-site-nav,
+    .hide-site-nav {
+        @apply hidden;
+    }
+    
+
+
 }

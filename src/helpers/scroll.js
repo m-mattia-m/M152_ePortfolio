@@ -33,11 +33,16 @@ addEventListener('scroll', (event) => {
 
 function navChange(hight, padding){
   if (hight > padding) {
-      document.getElementById("header").classList.add("header-scroll");
-      document.getElementById("nav").classList.add("nav-links-scroll");
+    document.getElementById("burger-bar-1").classList.add("burger-bar-scroll")
+    document.getElementById("burger-bar-2").classList.add("burger-bar-scroll")
+    document.getElementById("burger-bar-3").classList.add("burger-bar-scroll")
+    
+    document.getElementById("header").classList.add("header-scroll");
+    document.getElementById("nav").classList.add("nav-links-scroll");
   } else {
-      document.getElementById("header").classList.remove("header-scroll");
-      document.getElementById("nav").classList.remove("nav-links-scroll");
+    document.getElementById("header").classList.remove("header-scroll");
+    document.getElementById("nav").classList.remove("nav-links-scroll");
+    Array.from(document.querySelectorAll('.burger-bar-scroll')).forEach((el) => el.classList.remove('burger-bar-scroll'));
   }
 }
 

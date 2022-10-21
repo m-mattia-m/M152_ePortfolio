@@ -21,16 +21,25 @@
     <div id="app" x-cloak x-data="homeComponent">
         <header x-ref="header" id="header">
             <header-nav>
-                <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo cursor-pointer" @click="onLogoClick" />
+                <img id="nav-logo" src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo" @click="onLogoClick" />
                 <nav id="nav">
-                    <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Home</span>
-                    <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Description</span>
-                    <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">About</span>
-                    <span class="nav-links" @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interested</span>
+                 <i class="fa-solid fa-xmark" id="menu-close" @click="closeMenu($event)"></i>
+                    <div id="responsive-nav-container">
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Home</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Description</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">About</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interested</span>
+                    </div>
                 </nav>
+                <!-- <menu-exit></menu-exit> -->
+                <burger id="burger-nav" @click="openMenu($event)">
+                    <burger-bar id="burger-bar-1"></burger-bar>
+                    <burger-bar id="burger-bar-2"></burger-bar>
+                    <burger-bar id="burger-bar-3"></burger-bar>
+                </burger>
             </header-nav>
         </header>
-        <site-nav>
+        <site-nav id="site-nav">
             <site-nav-content>
                 <circle id="circle-home" class="current-section" @click="onNavLinkClick($event, $refs.home, $refs.header)"></circle>
                 <circle id="circle-description" @click="onNavLinkClick($event, $refs.description, $refs.header)"></circle>
@@ -40,13 +49,13 @@
         </site-nav>
         <main>
             <section id="home" x-ref="home">
-                <home class="w-full flex flex-row bg-primary text-white">
+                <home>
                     <!-- grid grid-cols-2 -->
                     <home-title>
                         <home-title-content>
-                            <h1 class="text-7xl text-left">SocialChat</h1>
-                            <p class="text-left">Unite your social media chats.</p>
-                            <button class="bg-secondary px-10 py-6 cursor-pointer transition ease-in-out delay-150 hover:-translate-1 hover:scale-110" @click="onReadMoreClick($event, $refs.about, $refs.header)">
+                            <h1>SocialChat</h1>
+                            <p>Unite your social media chats.</p>
+                            <button @click="onReadMoreClick($event, $refs.about, $refs.header)">
                             Read more
                         </button>
                         </home-title-content>
@@ -57,27 +66,27 @@
                 </home>
             </section>
             <section id="description" x-ref="description">
-                <description class="w-full flex flex-col">
-                    <question-one class="flex flex-row w-full">
-                        <question-one-description class="w-1/2 padding-right">
-                            <h1 class="w-full site-headline">Was ist SocialChat?</h1>
-                            <p class="text-justify">
+                <description>
+                    <question-one class="question">
+                        <question-one-description class="question-description padding-right">
+                            <h1 class="site-headline">Was ist SocialChat?</h1>
+                            <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                                 sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                                 et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                             </p>
                         </question-one-description>
-                        <question-one-image class="w-1/2 padding-left question-image-container">
+                        <question-one-image class="question-image-container padding-left">
                             <img src="./assets/gradient.png" alt="" class="question-image" />
                         </question-one-image>
                     </question-one>
-                    <question-two class="flex flex-row w-full margin-top">
-                        <question-two-image class="w-1/2 padding-right question-image-container">
+                    <question-two class="question">
+                        <question-two-image class="question-image-container padding-right">
                             <img src="./assets/gradient.png" alt="" class="question-image" />
                         </question-two-image>
-                        <question-two-description class="w-1/2 padding-left">
-                            <h1 class="w-full site-headline">Was kann SocialChat?</h1>
-                            <p class="text-justify">
+                        <question-two-description class="question-description padding-left">
+                            <h1 class="site-headline">Was kann SocialChat?</h1>
+                            <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                                 sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                                 et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -87,16 +96,16 @@
                 </description>
             </section>
             <section id="about" x-ref="about">
-                <about class="w-full flex flex-col">
+                <about>
                     <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
-                    <h1 class="w-full site-headline">Über uns</h1>
+                    <h1 class="site-headline">Über uns</h1>
                     <!-- rename it to: The Problem | Das Problem-->
                     <iframe src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </about>
             </section>
             <section id="interested" x-ref="interested">
-                <interested class="w-full flex flex-col">
-                    <h1 class="w-full site-headline">
+                <interested>
+                    <h1 class="site-headline">
                         Bist du interessiert an SocialChat?
                     </h1>
                     <form x-data="formComponent">
@@ -117,16 +126,16 @@
                         <form-row>
                             <button @click.prevent="onFormSubmit" class="transition ease-in-out delay-150 hover:-translate-1 hover:scale-110">Eintragen</button>
                         </form-row>
-                        <alert-error x-show="alertError" class="fix  fixed top-24 right-4 w-96">
-                            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <alert-error class="alert" x-show="alertError">
+                            <div class="alert-container alert-error-container" role="alert">
                                 <span class="block sm:inline" x-html="alertErrorText"></span>
                                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                                   <svg @click="alertError = false" class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
                             </div>
                         </alert-error>
-                        <alert-success x-show="alertSuccess" class="fix  fixed top-24 right-4 w-96">
-                            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                        <alert-success class="alert" x-show="alertSuccess">
+                            <div class="alert-container alert-success-container" role="alert">
                                 <span class="block sm:inline" x-html="alertSuccessText"></span>
                                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                                   <svg @click="alertSuccess = false" class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
