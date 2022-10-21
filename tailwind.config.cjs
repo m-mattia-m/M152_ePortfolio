@@ -30,6 +30,9 @@ module.exports = {
             },
             padding: {
                 sitedefault: '6rem',
+            },
+            transitionDelay: {
+                primary: "100ms",
             }
         },
     },

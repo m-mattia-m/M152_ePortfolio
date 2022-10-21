@@ -30,7 +30,14 @@
                 </nav>
             </header-nav>
         </header>
-        <!-- <header></header> -->
+        <site-nav>
+            <site-nav-content>
+                <circle id="circle-home" class="current-section" @click="onNavLinkClick($event, $refs.home, $refs.header)"></circle>
+                <circle id="circle-description" @click="onNavLinkClick($event, $refs.description, $refs.header)"></circle>
+                <circle id="circle-about" @click="onNavLinkClick($event, $refs.about, $refs.header)"></circle>
+                <circle id="circle-interested" @click="onNavLinkClick($event, $refs.interested, $refs.header)"></circle>
+            </site-nav-content>
+        </site-nav>
         <main>
             <section id="home" x-ref="home">
                 <home class="w-full flex flex-row bg-primary text-white">
