@@ -71,8 +71,7 @@ Die Navigationsstruktur ist eine gewöhnliches Menü, dass aber auf einer One-Pa
 
 ### Bearbeitungsdokumentation
 
-Ich habe das Bild mit Affinity Photo bearbeitet, da ich Privat die Affinity-Programme schon benutzt habe. Zuerst habe ich das mittlere Browserfenster ausgewählt und danach die Auswahl umgekehrt. Dann hatte ich alles aussen herum markiert welches ich dann mit dem Blur-Filter verschwommen habe. Danach habe ich wieder das mittlere Browserfenster markiert und die Gausssche Unschärfe so positioniert, dass die Farben darin intensiver wurden und die Bildschirmspiegelung weg waren. Zum Schluss habe ich noch dem Mauszeiger auf dem Mittleren Browserfenster entfernt.
-
+Ich habe das Bild mit Affinity Photo bearbeitet, da ich Privat die Affinity-Programme schon benutzt habe. Zuerst habe ich das mittlere Browserfenster ausgewählt und danach die Auswahl umgekehrt. Dann hatte ich alles aussen herum markiert welches ich dann mit dem Blur-Filter verschwommen habe. Danach habe ich wieder das mittlere Browserfenster markiert und die Gradionskurve so positioniert, dass die Farben darin intensiver wurden und die Bildschirmspiegelung weg waren. Zum Schluss habe ich noch dem Mauszeiger auf dem Mittleren Browserfenster, die Lampenreflektionen und das Bild oben Links entfernt.
 ### Reflexion
 
 Ich fand es schwierig ein Bild zu machen für mein ePortfolio-Thema, da man nicht viel machen konnte. Ich habe deshalb mein Bildschirm Fotografiert auf dem mehrere Social Media Kanäle geöffnet sind, da man alle Kanäle unterhalten muss. Nachdem ich ein paar Bilder hatte, war meine erste Idee den Hintergrund unscharf zu machen. Als ich das hatte wollte ich das Mittlere Fenster stärker in den Fokus setzen und somit die Farben verstärken und die Reflexion vom Bildschirm entfernen. Am Schluss störte mich noch, dass ich vergessen habe den Mauszeiger zu entfernen und habe ihn darum im Bild noch weggemacht.
