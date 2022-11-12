@@ -54,8 +54,8 @@ Die Navigationsstruktur ist eine gewöhnliches Menü, dass aber auf einer One-Pa
 
 <table>
   <tr>
-    <th> Original </th>
-    <th> Bearbeitung </th>
+    <th style="width: 50%;"> Original </th>
+    <th style="width: 50%;"> Bearbeitung </th>
   </tr>
   <tr>
     <td style="width: 50%;">
