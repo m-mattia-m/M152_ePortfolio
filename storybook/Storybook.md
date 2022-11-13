@@ -2,6 +2,7 @@
 ## Inhaltsverzeichnis
 
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+- [Vorwort](#vorwort)
 - [Beschreibung des ePortfolios](#beschreibung-des-eportfolios)
     - [Begründung der Themenwal](#begründung-der-themenwal)
 - [Visualisierung des ePortfolios](#visualisierung-des-eportfolios)
@@ -15,6 +16,10 @@
     - [Reflexion](#reflexion-1)
 - [Auswahl des Frameworks](#auswahl-des-frameworks)
     - [Begründung](#begründung)
+
+## Vorwort
+
+Alle Links sind sind öffentlich zugänglich und auf einer [Linkliste](http://socialchat-linklist.upcraft.li/) zusammengefasst. Dort kann man das Storybook als Markdown ansehen, die Prototypen direkt öffnen und noch weiteres.
 
 ## Beschreibung des ePortfolios
 
@@ -30,11 +35,7 @@ Ich habe mich für dieses Thema entschieden, da ich lange keine Idee hatte was i
 
 ## Visualisierung des ePortfolios
 
-[//]: # (![Prototyp MacBook Homescreen]&#40;./src/Prototyp-MacBook-Homescreen.png&#41;)
-
-[//]: # (: # &#40;![Prototyp iPhone Homescreen]&#40;./src/Prototyp_iPhone.png&#41;&#41;)
-
-<img src="./src/Prototyp-MacBook-Homescreen.png" width="76%"/><img src="./src/Prototyp_iPhone.png" width="24%" />
+<img src="./src/Prototyp-MacBook-Homescreen.png" width="75.65%"/><img src="./src/Prototyp_iPhone.png" width="24.35%" />
 
 Der Prototyp kann auf der [Linkliste](https://socialchat-linklist.upcraft.li/) oder über den [Direktlink](https://www.figma.com/file/enmASxtahbNuY0tpAu9Lky/M152_ePortfolio?node-id=0%3A1) aufgerufen werden.
 
@@ -59,15 +60,15 @@ Die Navigationsstruktur ist eine gewöhnliches Menü, dass aber auf einer One-Pa
   </tr>
   <tr>
     <td style="width: 50%;">
-      <img src="./src/SocialChat-Bild.jpeg" width="100%"/>
+      <img src="./src/SocialChat-Bild_original.png"/>
     </td>
     <td style="width: 50%;">
-      <img src="./src/SocialChat-Bild.png" width="100%"/>
+      <img src="./src/SocialChat-Bild_edited.png"/>
     </td>
   </tr>
 </table>
 
-![SocialChat-Bild-before-after](./src/before-after_slow.gif)
+![SocialChat-Bild-before-after](./src/before_after_slow.gif)
 
 ### Bearbeitungsdokumentation
 
@@ -94,14 +95,14 @@ Ich fand es schwierig ein Bild zu machen für mein ePortfolio-Thema, da man nich
       <img src="./src/sc-logo_v2.png" width="100%"/>
     </td>
     <td style="width: 33.3%;">
-      <img src="./src/sc-logo_v2.png" width="100%"/>
+      <img src="./src/sc-logo_v3.png" width="100%"/>
     </td>
   </tr>
 </table>
 
 ### Reflexion
 
-Als erstes Logo habe ich einfach eine Sprechblase mit einem Icon genommen, jedoch fand ich das etwas zu wenig und einfallslos. Danach habe ich mich auf [Logo.com](https://logo.com/) umgesehen  um mich inspirieren zu lassen, jedoch habe ich bemerkt dass das Logo was ich mit diesen Inspirationen selbst gemacht habe etwas zu detailliert war und man auf der Webseite kaum erkennen konnte. Deshalb habe ich das Logo nochmals ein drittes mal neu gemacht.
+Als erstes Logo habe ich einfach eine Sprechblase mit einem Icon genommen, jedoch fand ich das etwas zu wenig und einfallslos. Danach habe ich mich auf [Logo.com](https://logo.com/) umgesehen  um mich inspirieren zu lassen, jedoch habe ich bemerkt dass das Logo was ich mit diesen Inspirationen selbst gemacht habe etwas zu detailliert war und man auf der Webseite kaum erkennen konnte. Deshalb habe ich das Logo nochmals ein drittes mal neu gemacht. Bei dritten habe ich den Namen auseinander genommen und übereinander gelegt, da habe ich bemerkt, dass ich das ich das 'i' und das 'h' miteinander verbinden kann, und dass die Sprechblase aus dem 't' kommen kann.
 
 ## Auswahl des Frameworks
 
