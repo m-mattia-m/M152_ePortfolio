@@ -1,4 +1,5 @@
 # Storybook - SocialChat
+
 ## Inhaltsverzeichnis
 
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
