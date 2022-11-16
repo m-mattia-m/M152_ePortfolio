@@ -16,6 +16,7 @@
     - [Reflexion](#reflexion-1)
 - [Auswahl des Frameworks](#auswahl-des-frameworks)
     - [Begründung](#begründung)
+- [Zeitplan](#Zeitplan)
 
 ## Vorwort
 
@@ -49,6 +50,13 @@ Das Schema kann auf der [Linkliste](https://socialchat-linklist.upcraft.li/) ode
 
 Die Navigationsstruktur ist ein gewöhnliches Menü, dass aber auf einer One-Page-Seite navigiert. Zur besseren Übersicht habe ich auf der rechten Seite noch eine Step-Navigation eingefügt, auf der man direkt sieht, bei welchem Schritt man aktuell ist. Diese Step-Navigation habe ich auf der Mobile-Version ausgeblendet, da es sonst zu überladen wirkte und nicht genügend Platz dafür auf der Seite gibt. Da die normale Navigation auf Mobile nicht immer funktioniert, da die Seite zu schmal ist, habe ich mich da für ein Hamburger-Menü entschieden, welches man aufklappen kann und dann werden die verschiedenen Bereiche mittig angezeigt, auf die man navigieren kann. Die Navigation wird ist immer oben, auch wenn man scrollt, jedoch ändert es hier die Farbe, da es am Anfang einen schöneren Kontrast gibt.
 
+### Homescreen
+
+Der Homescreen ist komplett farbig hinterlegt, damit es angenehm ansieht. Ebenfalls habe ich den Titel, einen Slogan und einen Button hinzugefügt, der auf den Abschnitt "Über uns" verlinkt, damit man direkt das Produkt erklärt bekommt. Weiter habe ich ein Bild auf der rechten Seite eingefügt, welches aber aus Platzgründen nur auf der Desktop-Version angezeigt wird.
+### Formular
+
+Das Formular habe ich erstellt, damit man sich für eine Demo anmelden oder um informiert zu bleiben. Weiter habe ich eine Snackbar hinzugefügt, damit der Benutzer weiss, ob das Formular erfolgreich oder nicht abgesendet wurde.
+
 ## Foto
 
 <table>
@@ -76,7 +84,7 @@ Ich habe das Bild mit Affinity Photo bearbeitet, da ich privat die Affinity-Prog
 
 ### Reflexion
 
-Ich fand es schwierig ein Bild zu machen für mein ePortfolio-Thema, da man nicht viel machen konnte. Ich habe deshalb meinen Bildschirm fotografiert, auf dem mehrere Social-Media-Kanäle geöffnet sind, da man alle Kanäle unterhalten muss. Nachdem ich ein paar Bilder hatte, war meine erste Idee den Hintergrund unscharf zu machen. Als ich das hatte, wollte ich das mittlere Fenster stärker in den Fokus setzen und somit die Farben verstärken und die Reflexion vom Bildschirm entfernen. Am Schluss störte mich noch, dass ich vergessen habe den Mauszeiger zu entfernen und habe ihn darum im Bild noch entfernt. Ebenfalls habe ich noch die Lichtreflexionen der Lampen und zwei Fehlermeldungen auf dem TikTok-Messenger entfernt aus dem Bild entfernt.
+Ich fand es schwierig ein Bild zu machen für mein ePortfolio-Thema, da man nicht viel machen konnte. Ich habe deshalb meinen Bildschirm fotografiert, auf dem mehrere Social-Media-Kanäle geöffnet sind, da man alle Kanäle unterhalten muss. Nachdem ich ein paar Bilder hatte, war meine erste Idee den Hintergrund unscharf zu machen. Als ich das hatte, wollte ich das mittlere Fenster stärker in den Fokus setzen und somit die Farben verstärken und die Reflexion vom Bildschirm entfernen. Am Schluss störte mich noch, dass ich vergessen habe den Mauszeiger zu entfernen und habe ihn darum im Bild noch entfernt. Ebenfalls habe ich noch die Lichtreflexionen der Lampen und zwei Fehlermeldungen auf dem TikTok-Messenger entfernt aus dem Bild entfernt. Die Dokumentation für das ePortfolio mache ich fortlaufend.
 
 ## Logo
 
@@ -114,3 +122,8 @@ Bei der Technologieauswahl habe ich mich auf eine Standard HTML Seite entschiede
 ### Begründung
 
 Ich habe mich für die Standard HTML Seite entschieden, da es sich für diese Seite gut eignet, da es nicht zu überladen ist. Ich wollte nicht eine komplexere Umgebung wie Angular oder Vue benutzten für eine eher einfachere Webseite. Tailwind als Style Library habe ich ausgewählt, da es aktuell sehr hoch im Kurs ist und ich somit im aktuellen Zeitgeist arbeiten kann. Ein weiterer Vorteil ist, dass nur diese Klassen geladen werden, welche benötigt werden, somit wird das CSS kleiner und die Webseite schneller. Ebenfalls wurde es mir von Kollegen und Freunden empfohlen. Dies habe ich als NodeJS-Umgebung erstellt, da es so am einfachsten war und ich auch einfacher die weiteren Technologien einbinden konnte. Wie zum Beispiel AlpineJS, dies habe ich benutzt, da es eine lightwight-Library ist und die Funktionen deutlich vereinfacht und verschmälert wurden im Gegensatz zu z.B. jQuery. Um die Web-Packages zu generieren habe ich mich für Vite entschieden, da es wie schon die anderen Technologien sehr beliebt ist und viel benutzt wird, somit konnte ich eine viel benutze und moderne Technologie benutzen. Für das Generieren des Web-Package habe ich mich für Vite entschieden, da es wie auch schon bei den anderen Technologien aktuell sehr beliebt ist und ich somit die aktuellen Technologien benutzen konnte. Was auch noch bemerkenswert bei Vite ist, dass es sehr schnell builded und ein Web-Package generiert.
+
+## Zeitplan
+
+Am Anfang setze ich die Umgebung mit NodeJS, Tailwind und AlpineJS auf. Danach erstelle ich die Struktur der Webseite und welche Elemente nacheinander kommen. Danach habe ich eine Pipeline für Github konfiguriert, damit ich die Webseite builden und auf Github-Pages veröffentlichen kann. Dann style ich die Desktop-Version und danach die Mobile-Version. Nachdem ich das Formular gestylt habe, binde ich eine API ein, mit der ich E-Mails versenden kann. Hierfür habe ich einen eigenen E-Mail-Service programmiert. Danach mache ich das Advanced Styling und zum Schluss Filme ich etwas und schneide das noch.
+![Zeitplan](./src/Timeline.png)
