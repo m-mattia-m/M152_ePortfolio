@@ -1,4 +1,9 @@
 /**
+ * @type int
+ */
+export const navPadding = 30
+
+/**
  * get the cordinates of a html section
  * @param {HTMLElement} element
  * @returns {{left: number, top: number} | null}
@@ -24,25 +29,32 @@ export function scrollTo(scrollOptions) {
 }
 
 addEventListener('scroll', (event) => {
-  const padding = 30;
-  var hight = window.pageYOffset;
-  navChange(hight, padding);
+  var hight = window.scrollY;
+  navChange(hight, navPadding);
   siteNavChangehight(hight);
 
 });
 
-function navChange(hight, padding){
+export function navChange(hight, padding){
+  var logo = document.getElementById("nav-logo")
+
+  console.log("hight: " + hight)
+  console.log("padding: " + padding)
+
   if (hight > padding) {
-    document.getElementById("burger-bar-1").classList.add("burger-bar-scroll")
-    document.getElementById("burger-bar-2").classList.add("burger-bar-scroll")
-    document.getElementById("burger-bar-3").classList.add("burger-bar-scroll")
-    
+    console.log("in the screen")
+    document.getElementById("nav-logo").src = "./assets/logo/sc-logo_v6_small-darkblue.svg";
+
     document.getElementById("header").classList.add("header-scroll");
-    document.getElementById("nav").classList.add("nav-links-scroll");
+    document.getElementById("nav").classList.add("nav-scroll");
+    Array.from(document.querySelectorAll('.hamburger-row')).forEach((el) => el.classList.add('hamburger-row-scroll'));
+
   } else {
+    console.log("at the top")
+    document.getElementById("nav-logo").src = "./assets/logo/sc-logo_v6_small.svg"
     document.getElementById("header").classList.remove("header-scroll");
-    document.getElementById("nav").classList.remove("nav-links-scroll");
-    Array.from(document.querySelectorAll('.burger-bar-scroll')).forEach((el) => el.classList.remove('burger-bar-scroll'));
+    document.getElementById("nav").classList.remove("nav-scroll");
+    Array.from(document.querySelectorAll('.hamburger-row-scroll')).forEach((el) => el.classList.remove('hamburger-row-scroll'));
   }
 }
 
@@ -56,7 +68,6 @@ function siteNavChangehight(hight){
       data["hight"] = hight,
       data["cordinates.top"] = cordinates.top,
       data["screen.height"] = screen.height,
-      console.log(data)
       Array.from(document.querySelectorAll('.current-section')).forEach((el) => el.classList.remove('current-section'));
       document.getElementById("circle-" + sections[i]).classList.add("current-section");
       break;

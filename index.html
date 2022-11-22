@@ -21,22 +21,21 @@
     <div id="app" x-cloak x-data="homeComponent">
         <header x-ref="header" id="header">
             <header-nav>
-                <img id="nav-logo" src="./assets/logo-white-box.png" alt="SocialChat-Logo" class="nav-logo" @click="onLogoClick" />
+<!--                <object id="nav-logo" class="nav-logo" @click="onLogoClick" data="./assets/logo/sc-logo_v6_small.svg" type="image/svg+xml"></object>-->
+                <img id="nav-logo" src="./assets/logo/sc-logo_v6_small.svg" alt="SocialChat-Logo" class="nav-logo" @click="onLogoClick" />
                 <nav id="nav">
-                 <i class="fa-solid fa-xmark" id="menu-close" @click="closeMenu($event)"></i>
                     <div id="responsive-nav-container">
-                        <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Home</span>
-                        <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Description</span>
-                        <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">About</span>
-                        <span class="nav-links" @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interested</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Start</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Beschreibung</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
                     </div>
                 </nav>
-                <!-- <menu-exit></menu-exit> -->
-                <burger id="burger-nav" @click="openMenu($event)">
-                    <burger-bar id="burger-bar-1"></burger-bar>
-                    <burger-bar id="burger-bar-2"></burger-bar>
-                    <burger-bar id="burger-bar-3"></burger-bar>
-                </burger>
+                <div @click="openMenu($event)" class="hamburger">
+                    <span :class="menuStatus ? 'translate-y-0 rotate-45' : '-translate-y-2'" class="hamburger-row"></span>
+                    <span :class="menuStatus ? 'opacity-0 translate-x-3' : 'opacity-100'" class="hamburger-row"></span>
+                    <span :class="menuStatus ? 'translate-y-0 -rotate-45' : 'translate-y-2'" class="hamburger-row"></span>
+                </div>
             </header-nav>
         </header>
         <site-nav id="site-nav">
@@ -50,24 +49,24 @@
         <main>
             <section id="home" x-ref="home">
                 <home>
-                    <!-- grid grid-cols-2 -->
                     <home-title>
                         <home-title-content>
                             <h1>SocialChat</h1>
-                            <p>Unite your social media chats.</p>
+                            <p>Alle Chats vereint auf einer Plattform.</p>
                             <button @click="onReadMoreClick($event, $refs.about, $refs.header)">
-                            Read more
+                            Mehr
                         </button>
                         </home-title-content>
                     </home-title>
                     <home-logo>
-                        <img src="./assets/logo-white-box.png" alt="SocialChat-Logo" />
+                        <img src="./assets/gradient_darkblue.png" alt="SocialChat-Logo" />
                     </home-logo>
                 </home>
+                <div class="home-triangle"></div>
             </section>
             <section id="description" x-ref="description">
                 <description>
-                    <question-one class="question">
+                    <question-one class="question" id="questionOne" x-ref="questionOne">
                         <question-one-description class="padding-right question-description">
                             <h1 class="site-headline">Was ist SocialChat?</h1>
                             <p>
@@ -80,7 +79,7 @@
                             <img src="./assets/gradient.png" alt="" class="question-image" />
                         </question-one-image>
                     </question-one>
-                    <question-two class="question">
+                    <question-two class="question" id="questionTwo" x-ref="questionTwo">
                         <question-two-description class="padding-left question-description">
                             <h1 class="site-headline">Was kann SocialChat?</h1>
                             <p>
@@ -99,8 +98,11 @@
                 <about>
                     <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
                     <h1 class="site-headline">Über uns</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
                     <!-- rename it to: The Problem | Das Problem-->
-                    <iframe src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="aboutVideo" src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </about>
             </section>
             <section id="interested" x-ref="interested">
@@ -110,27 +112,43 @@
                     </h1>
                     <form x-data="formComponent">
                         <form-row>
-                            <input type="text" placeholder="Vorname" x-model="form.firstname" />
+                            <input type="text" placeholder="Vorname*" x-model="form.firstname" />
                             <span class="form-spacing"></span>
-                            <input type="text" placeholder="Nachname" x-model="form.lastname" />
+                            <input type="text" placeholder="Nachname*" x-model="form.lastname" />
                         </form-row>
                         <form-row>
-                            <input type="email" placeholder="Email" x-model="form.email" />
+                            <input type="text" placeholder="Firma*" x-model="form.company" />
+                        </form-row>
+                        <form-row>
+                            <input type="email" placeholder="Email*" x-model="form.email" />
                         </form-row>
                         <form-row>
                             <input type="tel" placeholder="Telefon" x-model="form.telephone" />
                         </form-row>
                         <form-row>
-                            <input type="text" placeholder="Firma" x-model="form.company" />
+                            <textarea placeholder="Nachricht" x-model="form.message" rows="3"></textarea>
                         </form-row>
+                        <form-row>
+                            <label class="checkboxLabel">
+                                <input type="checkbox" x-model="form.demoLogin" />
+                                <p>Ich möchte einen kostenlosen Demo-Zugang erhalten.</p>
+                            </label>
+                        </form-row>
+                        <form-row>
+                            <label class="checkboxLabel">
+                                <input type="checkbox" x-model="form.demoPresentation" />
+                                <p>Ich möchteeine kostenlose Demo-Präsentation von Team bekommen.</p>
+                            </label>
+                        </form-row>
+
                         <form-row class="last-form-row">
-                            <button @click.prevent="onFormSubmit" class="transition ease-in-out delay-150 hover:-translate-1 hover:scale-110">Eintragen</button>
+                            <button @click.prevent="onFormSubmit">Eintragen</button>
                         </form-row>
                         <alert-error class="alert" x-show="alertError">
                             <div class="alert-container alert-error-container" role="alert">
                                 <span class="block sm:inline" x-html="alertErrorText"></span>
                                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                                  <svg @click="alertError = false" class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                                  <svg @click="alertError = false" class="fill-current h-6 w-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
                             </div>
                         </alert-error>
@@ -138,7 +156,7 @@
                             <div class="alert-container alert-success-container" role="alert">
                                 <span class="block sm:inline" x-html="alertSuccessText"></span>
                                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                                  <svg @click="alertSuccess = false" class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                                  <svg @click="alertSuccess = false" class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
                             </div>
                         </alert-success>
@@ -161,11 +179,11 @@
             </footer-border>
             <footer-links>
                 <h3>Links</h3>
-                <span class="nav-links">Startseite</span>
-                <span class="nav-links">Was ist SocialChat?</span>
-                <span class="nav-links">Was kann SocialChat?</span>
-                <span class="nav-links">Über SocialChat?</span>
-                <span class="nav-links">Interessiert</span>
+                <span @click="onNavLinkClick($event, $refs.home, $refs.header)">Startseite</span>
+                <span @click="onNavLinkClick($event, $refs.questionOne, $refs.header)">Was ist SocialChat?</span>
+                <span @click="onNavLinkClick($event, $refs.questionTwo, $refs.header)">Was kann SocialChat?</span>
+                <span @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
+                <span @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
             </footer-links>
             <footer-border>
                 <vl></vl>
@@ -173,12 +191,10 @@
             <footer-socialmedia>
                 <h3>Social Media</h3>
                 <socialmedia-icons>
-                    <a href="https://google.com/" target="_blank" rel="Linkedin"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://google.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://google.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://google.com/" target="_blank" rel="Instagram"><i
-                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" rel="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://tiktok.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://twitter.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </socialmedia-icons>
             </footer-socialmedia>
         </footer>

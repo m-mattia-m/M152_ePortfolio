@@ -3,12 +3,12 @@
  * @param {FormData} from
  * @returns { httpStatus | null}
  */
-export function sendEmail(email, message) {
-    fetch('http://localhost:8080/api/v1/email', {
+export async function sendEmail(email, message) {
+    fetch('https://emailing-service.one.nodes.upcraft.li/api/v1/email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-API-Key': 'viKGXC3DbMARMh7YdZoxDl5fZ7AI0r-Jatc82sZ8Y1fOtL05OTYxm8K9CDmm-Tt6E_SoDODs46bag8J9VwuPHV1G3tSjJgZKSMFK91dTNUdrsfoEPMf_bOKxgTkG7MuwFlTaf3pMDokp6W9spTRtZOJHooi60w69h-xsoc-5k5k='
+                'X-API-Key': 'X6cQ6xa-DvzsWxxnAY-WSxFXRHkMloZdjhmNbU1CkywGC3Fznwv50qrEd4D4aET3lOIG_7m07mk6SbvWkUzMoh-oFYtJFV7l6L5WVxbwviAB-i_XHLo0gwIO04DcqXRow8hHRC85LRoNyIP49JMY9zMdkH-fccd33yzzfcOoiiw='
             },
             body: JSON.stringify({
                 keyword: "socialchat",
