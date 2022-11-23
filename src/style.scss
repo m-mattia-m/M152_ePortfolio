@@ -383,8 +383,10 @@ question-image-container,
 
 question-one-image,
 .question-one-image {
-    @apply shadow-[16px_16px];
-    @apply shadow-primary;
+    //@apply shadow-[16px_16px];
+    //@apply shadow-primary;
+
+    @apply mt-12;
 }
 
 question-two,
@@ -394,8 +396,10 @@ question-two,
 
 question-two-image,
 .question-two-image {
-    @apply shadow-[-16px_16px];
-    @apply shadow-primary;
+    //@apply shadow-[-16px_16px];
+    //@apply shadow-primary;
+
+    @apply mt-12;
 }
 
 
@@ -585,7 +589,13 @@ padding-top,
 
 margin-top,
 .margin-top {
-    @apply mt-60;
+    @apply mt-40;
+
+    //@apply mt-30;
+
+    @screen md {
+        @apply mt-60;
+    }
 }
 
 alert,
