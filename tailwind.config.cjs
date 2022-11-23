@@ -27,17 +27,17 @@ module.exports = {
             },
             margin: {
                 "site-default": '10rem',
-                "tablet": '3rem',
+                "tablet": '6rem',
                 "mobile": '1.5rem',
             },
             padding: {
                 "site-default": '10rem',
-                "tablet": '3rem',
+                "tablet": '6rem',
                 "mobile": '1.5rem',
             },
             spacing: {
                 "site-default": '10rem',
-                "tablet": '3rem',
+                "tablet": '6rem',
                 "mobile": '1.5rem',
             },
             transitionDelay: {
