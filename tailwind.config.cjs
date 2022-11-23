@@ -28,17 +28,17 @@ module.exports = {
             margin: {
                 sitedefault: '6rem',
                 tablet: '3rem',
-                mobile: '1rem',
+                mobile: '1.5rem',
             },
             padding: {
                 sitedefault: '6rem',
                 tablet: '3rem',
-                mobile: '1rem',
+                mobile: '1.5rem',
             },
             spacing: {
                 sitedefault: '6rem',
                 tablet: '3rem',
-                mobile: '1rem',
+                mobile: '1.5rem',
             },
             transitionDelay: {
                 primary: "100ms",
