@@ -60,7 +60,7 @@ header-nav,
     @apply flex-row;
     @apply h-16;
     @apply py-3;
-    @apply px-sitedefault;
+    @apply px-site-default;
 }
 
 .nav-links {
@@ -208,7 +208,7 @@ home-title,
     @apply flex;
     @apply flex-col;
     @apply justify-center;
-    @apply ml-sitedefault;
+    @apply ml-site-default;
 }
 
 home-title-content,
@@ -239,7 +239,7 @@ home-logo,
     @apply flex-row;
     @apply items-center;
     @apply justify-end;
-    @apply mr-sitedefault;
+    @apply mr-site-default;
 }
 
 home-logo>*,
@@ -253,7 +253,7 @@ about,
 .about,
 interested,
 .interested {
-    @apply px-sitedefault;
+    @apply px-site-default;
     //@apply mt-20;
     @apply margin-top;
     @apply w-full;
@@ -368,7 +368,7 @@ footer,
     @apply flex;
     @apply flex-row;
     @apply justify-between;
-    @apply px-sitedefault;
+    @apply px-site-default;
     @apply py-12;
     @apply bg-primary;
     @apply text-white;
@@ -530,7 +530,7 @@ menu-close,
 .menu-close,
 #menu-close {
     @apply fixed;
-    @apply right-sitedefault;
+    @apply right-site-default;
     @apply flex;
     @apply top-2;
     @apply text-5xl;

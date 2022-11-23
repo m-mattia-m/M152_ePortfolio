@@ -26,19 +26,19 @@ module.exports = {
                 tertiary: '#023047',
             },
             margin: {
-                sitedefault: '6rem',
-                tablet: '3rem',
-                mobile: '1.5rem',
+                "site-default": '10rem',
+                "tablet": '3rem',
+                "mobile": '1.5rem',
             },
             padding: {
-                sitedefault: '6rem',
-                tablet: '3rem',
-                mobile: '1.5rem',
+                "site-default": '10rem',
+                "tablet": '3rem',
+                "mobile": '1.5rem',
             },
             spacing: {
-                sitedefault: '6rem',
-                tablet: '3rem',
-                mobile: '1.5rem',
+                "site-default": '10rem',
+                "tablet": '3rem',
+                "mobile": '1.5rem',
             },
             transitionDelay: {
                 primary: "100ms",
