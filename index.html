@@ -20,7 +20,7 @@
 <body>
     <div id="app" x-cloak x-data="homeComponent">
         <header x-ref="header" id="header">
-            <header-nav>
+            <div class="header-nav">
 <!--                <object id="nav-logo" class="nav-logo" @click="onLogoClick" data="./assets/logo/sc-logo_v6_small.svg" type="image/svg+xml"></object>-->
                 <img id="nav-logo" src="./assets/logo/sc-logo_v6_small.svg" alt="SocialChat-Logo" class="nav-logo" @click="onLogoClick" />
                 <nav id="nav">
@@ -36,68 +36,68 @@
                     <span :class="menuStatus ? 'opacity-0 translate-x-3' : 'opacity-100'" class="hamburger-row"></span>
                     <span :class="menuStatus ? 'translate-y-0 -rotate-45' : 'translate-y-2'" class="hamburger-row"></span>
                 </div>
-            </header-nav>
+            </div>
         </header>
-        <site-nav id="site-nav">
-            <site-nav-content>
-                <circle id="circle-home" class="current-section" @click="onNavLinkClick($event, $refs.home, $refs.header)"></circle>
-                <circle id="circle-description" @click="onNavLinkClick($event, $refs.description, $refs.header)"></circle>
-                <circle id="circle-about" @click="onNavLinkClick($event, $refs.about, $refs.header)"></circle>
-                <circle id="circle-interested" @click="onNavLinkClick($event, $refs.interested, $refs.header)"></circle>
-            </site-nav-content>
-        </site-nav>
+        <div class="site-nav" id="site-nav">
+            <div class="site-nav-content">
+                <div class="circle" id="circle-home" class="current-section" @click="onNavLinkClick($event, $refs.home, $refs.header)"></div>
+                <div class="circle" id="circle-description" @click="onNavLinkClick($event, $refs.description, $refs.header)"></div>
+                <div class="circle" id="circle-about" @click="onNavLinkClick($event, $refs.about, $refs.header)"></div>
+                <div class="circle" id="circle-interested" @click="onNavLinkClick($event, $refs.interested, $refs.header)"></div>
+            </div>
+        </div>
         <main>
             <section id="home" x-ref="home">
-                <home>
-                    <home-title>
-                        <home-title-content>
+                <div class="home">
+                    <div class="home-title">
+                        <div class="home-title-content">
                             <h1>SocialChat</h1>
                             <p>Alle Chats vereint auf einer Plattform.</p>
                             <button @click="onReadMoreClick($event, $refs.about, $refs.header)">
-                            Mehr
-                        </button>
-                        </home-title-content>
-                    </home-title>
-                    <home-logo>
+                                Mehr
+                            </button>
+                        </div>
+                    </div>
+                    <div class="home-logo">
                         <img src="./assets/gradient_darkblue.png" alt="SocialChat-Logo" />
-                    </home-logo>
-                </home>
+                    </div>
+                </div>
                 <div class="home-triangle-container">
                     <div class="home-triangle"></div>
                 </div>
             </section>
             <section id="description" x-ref="description">
-                <description>
-                    <question-one class="question" id="questionOne" x-ref="questionOne">
-                        <question-one-description class="padding-right question-description">
+                <div class="description">
+                    <div class="question question-one" id="questionOne" x-ref="questionOne">
+                        <div class="question-one-description padding-right question-description">
                             <h1 class="site-headline">Was ist SocialChat?</h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                                 sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                                 et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                             </p>
-                        </question-one-description>
-                        <question-one-image class="question-image-container">
+                        </div>
+                        <div class=" question-one-image question-image-container">
                             <img src="./assets/gradient.png" alt="" class="question-image" />
-                        </question-one-image>
-                    </question-one>
-                    <question-two class="question" id="questionTwo" x-ref="questionTwo">
-                        <question-two-description class="padding-left question-description">
+                        </div>
+                    </div>
+                    <div class="question question-two" id="questionTwo" x-ref="questionTwo">
+                        <div class="padding-left question-description question-two-description">
                             <h1 class="site-headline">Was kann SocialChat?</h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                                 sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                                 et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                             </p>
-                        </question-two-description>
-                        <question-two-image class="question-image-container">
+                        </div>
+                        <div class="question-image-container question-two-image">
                             <img src="./assets/gradient.png" alt="" class="question-image" />
-                        </question-two-image>
-                    </question-two>
-                </description>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="about" x-ref="about">
-                <about>
+                <div class="about">
                     <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
                     <h1 class="site-headline">Über uns</h1>
                     <p>
@@ -105,69 +105,69 @@
                     </p>
                     <!-- rename it to: The Problem | Das Problem-->
                     <iframe id="aboutVideo" src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </about>
+                </div>
             </section>
             <section id="interested" x-ref="interested">
-                <interested>
+                <div class="interested">
                     <h1 class="site-headline">
                         Bist du interessiert an SocialChat?
                     </h1>
                     <form x-data="formComponent">
-                        <form-row>
+                        <div class="form-row">
                             <input type="text" placeholder="Vorname*" x-model="form.firstname" />
                             <span class="form-spacing"></span>
                             <input type="text" placeholder="Nachname*" x-model="form.lastname" />
-                        </form-row>
-                        <form-row>
+                        </div>
+                        <div class="form-row">
                             <input type="text" placeholder="Firma*" x-model="form.company" />
-                        </form-row>
-                        <form-row>
+                        </div>
+                        <div class="form-row">
                             <input type="email" placeholder="Email*" x-model="form.email" />
-                        </form-row>
-                        <form-row>
+                        </div>
+                        <div class="form-row">
                             <input type="tel" placeholder="Telefon" x-model="form.telephone" />
-                        </form-row>
-                        <form-row>
+                        </div>
+                        <div class="form-row">
                             <textarea placeholder="Nachricht" x-model="form.message" rows="3"></textarea>
-                        </form-row>
-                        <form-row>
+                        </div>
+                        <div class="form-row">
                             <label class="checkboxLabel">
                                 <input type="checkbox" x-model="form.demoLogin" />
                                 <p>Ich möchte einen kostenlosen Demo-Zugang erhalten.</p>
                             </label>
-                        </form-row>
-                        <form-row>
+                        </div>
+                        <div class="form-row">
                             <label class="checkboxLabel">
                                 <input type="checkbox" x-model="form.demoPresentation" />
                                 <p>Ich möchteeine kostenlose Demo-Präsentation von Team bekommen.</p>
                             </label>
-                        </form-row>
+                        </div>
 
-                        <form-row class="last-form-row">
+                        <div class="form-row last-form-row">
                             <button @click.prevent="onFormSubmit">Eintragen</button>
-                        </form-row>
-                        <alert-error class="alert" x-show="alertError">
+                        </div>
+                        <div class="alert alert-error" x-show="alertError">
                             <div class="alert-container alert-error-container" role="alert">
                                 <span class="block sm:inline" x-html="alertErrorText"></span>
                                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                                   <svg @click="alertError = false" class="fill-current h-6 w-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
                             </div>
-                        </alert-error>
-                        <alert-success class="alert" x-show="alertSuccess">
+                        </div>
+                        <div class="alert alert-success" x-show="alertSuccess">
                             <div class="alert-container alert-success-container" role="alert">
                                 <span class="block sm:inline" x-html="alertSuccessText"></span>
                                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                                   <svg @click="alertSuccess = false" class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
                             </div>
-                        </alert-success>
+                        </div>
                     </form>
-                </interested>
+                </div>
             </section>
         </main>
         <footer class="margin-top">
-            <footer-contact>
+            <div class="footer-contact">
                 <h3>Kontakt</h3>
                 <p>Mattia Mügger</p>
                 <p>Hinterdorfstrasse 10</p>
@@ -175,30 +175,30 @@
                 <br />
                 <a href="tel:+41 79 505 48 28">+41 79 505 48 28</a>
                 <a href="mailto:hi@socialchat.io">hi@socialchat.io</a>
-            </footer-contact>
-            <footer-border>
+            </div>
+            <div class="footer-border">
                 <vl></vl>
-            </footer-border>
-            <footer-links>
+            </div>
+            <div class="footer-links">
                 <h3>Links</h3>
                 <span @click="onNavLinkClick($event, $refs.home, $refs.header)">Startseite</span>
                 <span @click="onNavLinkClick($event, $refs.questionOne, $refs.header)">Was ist SocialChat?</span>
                 <span @click="onNavLinkClick($event, $refs.questionTwo, $refs.header)">Was kann SocialChat?</span>
                 <span @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
                 <span @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
-            </footer-links>
-            <footer-border>
+            </div>
+            <div class="footer-border">
                 <vl></vl>
-            </footer-border>
-            <footer-socialmedia>
+            </div>
+            <div class="footer-socialmedia">
                 <h3>Social Media</h3>
-                <socialmedia-icons>
+                <div class="socialmedia-icons">
                     <a href="https://linkedin.com/" target="_blank" rel="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://tiktok.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                     <a href="https://twitter.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://instagram.com/" target="_blank" rel="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </socialmedia-icons>
-            </footer-socialmedia>
+                </div>
+            </div>
         </footer>
     </div>
 
