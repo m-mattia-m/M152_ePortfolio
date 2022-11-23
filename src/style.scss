@@ -175,12 +175,30 @@ home,
     @apply text-white;
 }
 
+/*
+sm: override
+home-triangle,
+.home-triangle {
+    @apply h-20;
+    @apply -m-0.5;
+    @apply relative;
+    @apply -z-10;
+    clip-path: polygon(0% 0%, 100% 0%, 37% 100%);
+}*/
+
 home-triangle,
 .home-triangle {
     @apply w-full;
     @apply h-20;
     @apply bg-primary;
+    @apply relative;
+    @apply -z-10;
+    @apply -m-0.5;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 37% 100%);
+
+    @screen md {
+        @apply m-0;
+    }
 }
 
 home-title,
@@ -689,11 +707,14 @@ form-spacing,
         @apply mr-tablet;
     }
 
-    home-triangle,
-    .home-triangle {
+    home-triangle-container,
+    .home-triangle-container {
+        @apply w-full;
         @apply h-20;
-        clip-path: polygon(0% 0%, 100% 0%, 37% 100%);
+        @apply z-0;
     }
+
+
 
     description,
     .description,
