@@ -1,3 +1,6 @@
+import svgUrl from '../../assets/logo/sc-logo_v6_small.svg'
+import blueSvgUrl from '../../assets/logo/sc-logo_v6_small-darkblue.svg'
+
 /**
  * @type int
  */
@@ -43,7 +46,7 @@ export function navChange(hight, padding){
 
   if (hight > padding) {
     console.log("in the screen")
-    document.getElementById("nav-logo").src = "./assets/logo/sc-logo_v6_small-darkblue.svg";
+    document.getElementById("nav-logo").src = blueSvgUrl;
 
     document.getElementById("header").classList.add("header-scroll");
     document.getElementById("nav").classList.add("nav-scroll");
@@ -51,7 +54,7 @@ export function navChange(hight, padding){
 
   } else {
     console.log("at the top")
-    document.getElementById("nav-logo").src = "./assets/logo/sc-logo_v6_small.svg"
+    document.getElementById("nav-logo").src = svgUrl
     document.getElementById("header").classList.remove("header-scroll");
     document.getElementById("nav").classList.remove("nav-scroll");
     Array.from(document.querySelectorAll('.hamburger-row-scroll')).forEach((el) => el.classList.remove('hamburger-row-scroll'));
