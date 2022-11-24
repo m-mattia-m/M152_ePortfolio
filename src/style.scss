@@ -87,7 +87,7 @@ nav-links,
     @apply text-center;
     @apply cursor-pointer;
 
-    @screen md {
+    @screen lg {
         @apply ml-6;
         @apply pb-0.5;
         @apply border-b-0;
@@ -118,7 +118,7 @@ nav,
 .nav {
     @apply hidden;
 
-    @screen md {
+    @screen lg {
         @apply w-full;
         @apply flex;
         @apply flex-row;
@@ -530,6 +530,14 @@ footer-links,
     @apply flex-col;
     @apply w-full;
     @apply padding-top;
+
+    @screen md {
+        @apply p-0;
+    }
+
+    @screen lg {
+        @apply p-0;
+    }
 }
 
 footer-socialmedia,
@@ -538,6 +546,14 @@ footer-socialmedia,
     @apply flex-col;
     @apply w-full;
     @apply padding-top;
+
+    @screen md {
+        @apply p-0;
+    }
+
+    @screen lg {
+        @apply p-0;
+    }
 }
 
 footer-border,
@@ -639,7 +655,7 @@ hamburger,
     @apply justify-center;
     @apply relative;
 
-    @screen md {
+    @screen lg {
         @apply hidden;
     }
 }
@@ -673,7 +689,7 @@ menu-close,
     @apply right-mobile;
 
     @screen md {
-        @apply flex;
+        //@apply flex;
         @apply right-tablet;
     }
 
@@ -704,6 +720,9 @@ nav-open-menu,
 menu-close-show,
 .menu-close-show {
     @screen md {
+        @apply hidden;
+    }
+    @screen lg {
         @apply flex;
     }
 }
