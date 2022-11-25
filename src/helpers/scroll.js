@@ -41,8 +41,8 @@ addEventListener('scroll', (event) => {
 export function navChange(hight, padding){
   var logo = document.getElementById("nav-logo")
 
-  console.log("hight: " + hight)
-  console.log("padding: " + padding)
+  // console.log("hight: " + hight)
+  // console.log("padding: " + padding)
 
   if (hight > padding) {
     console.log("in the screen")
@@ -50,6 +50,7 @@ export function navChange(hight, padding){
 
     document.getElementById("header").classList.add("header-scroll");
     document.getElementById("nav").classList.add("nav-scroll");
+    Array.from(document.querySelectorAll('.nav-links')).forEach((el) => el.classList.add('nav-links-scroll'));
     Array.from(document.querySelectorAll('.hamburger-row')).forEach((el) => el.classList.add('hamburger-row-scroll'));
 
   } else {
@@ -57,6 +58,7 @@ export function navChange(hight, padding){
     document.getElementById("nav-logo").src = svgUrl
     document.getElementById("header").classList.remove("header-scroll");
     document.getElementById("nav").classList.remove("nav-scroll");
+    Array.from(document.querySelectorAll('.nav-links-scroll')).forEach((el) => el.classList.remove('nav-links-scroll'));
     Array.from(document.querySelectorAll('.hamburger-row-scroll')).forEach((el) => el.classList.remove('hamburger-row-scroll'));
   }
 }

@@ -103,6 +103,14 @@ nav-links,
     }
 }
 
+nav-links-scroll,
+.nav-links-scroll {
+    @screen lg {
+        @apply from-tertiary;
+        @apply to-tertiary;
+    }
+}
+
 nav-links:hover,
 .nav-links:hover {
     @apply bg-[length:100%_3px];
