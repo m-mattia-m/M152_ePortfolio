@@ -57,9 +57,10 @@ window.formComponent = () => {
         /**
          * onFormSubmit
          * @param {MouseEvent} $event
-         */ async onFormSubmit($event) {
-             var demoLoginText = ""
-             if (this.form.demoLogin) {
+         */
+        async onFormSubmit($event) {
+            var demoLoginText = ""
+            if (this.form.demoLogin) {
                  demoLoginText = "Wir melden uns für den Demo-Zugang bei dir. \n"
                  console.log(demoLoginText)
              }
@@ -76,18 +77,17 @@ window.formComponent = () => {
                 ((this.form.message !== "") ? "Nachricht: " + this.form.message + "\n" : "") +
                 demoLoginText + demoPresentationText +
                 "\n\nFreundliche Grüsse \nSocialChat-Team";
-            var httpStatus = 0
-            httpStatus = await sendEmail(this.form.email, message)
-            console.log("httpStatus: " + httpStatus)
-            if (httpStatus === 200) {
+
+            let response = await sendEmail(this.form.email, message)
+            console.log(response)
+            if (response.status == 200) {
                 this.showAlertSuccess("Du wurdest erfolgreich angemeldet, bitte prüfe dein E-Mail-Postfach nach dem Bestätigungsmail.")
             } else {
                 this.showAlertError("Es ist ein Fehler aufgetreten, bitte schreibe uns ein <u><b><a href='mailto:hi@socialchat.io'>E-Mail</a></b></u> um dich anzumelden.")
             }
-            console.log("request fertig")
         },
         showAlertSuccess(message) {
-            this.alertSuccesstext = message
+            this.alertSuccessText = message
             this.alertSuccess = true
             console.log("alert-success")
             setTimeout(function() {
