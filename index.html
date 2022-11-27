@@ -146,7 +146,17 @@
                             </label>
                         </div>
                         <div class="form-row last-form-row">
-                            <button @click.prevent="onFormSubmit">Eintragen</button>
+                            <button @click.prevent="onFormSubmit" class="button-submit">
+                                Eintragen
+                            </button>
+                        </div>
+                        <div class="donut-container"  x-show="formLoad">
+                            <svg viewBox="0 0 42 42" class="donut animate-spin">
+                                <!--                            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>-->
+                                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+
+                                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#023047" stroke-width="3" stroke-dasharray="85 200" stroke-dashoffset="25"></circle>
+                            </svg>
                         </div>
                     </form>
                     <div class="alert alert-error" x-show="alertError">

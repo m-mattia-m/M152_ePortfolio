@@ -729,6 +729,52 @@ alert-error-container,
     @apply text-red-700;
 }
 
+donut-container,
+.donut-container {
+    @apply h-[110%];
+    @apply absolute;
+    @apply left-mobile;
+    @apply right-mobile;
+    //@apply my-mobile;
+
+    @apply bg-white;
+    @apply bg-opacity-50;
+
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+
+    @screen md {
+        @apply h-full;
+        @apply left-tablet;
+        @apply right-tablet;
+        @apply py-0;
+    }
+    @screen lg {
+        @apply h-full;
+        @apply left-site-default;
+        @apply right-site-default;
+        @apply py-0;
+    }
+}
+
+donut,
+.donut {
+    @apply w-12;
+    @apply h-12;
+    @apply mb-40;
+}
+
+donut-ring,
+.donut-ring {
+    @apply bg-gray-300;
+}
+
+donut-segment,
+.donut-segment {
+    @apply bg-tertiary;
+}
+
 hamburger,
 .hamburger {
     @apply w-6;

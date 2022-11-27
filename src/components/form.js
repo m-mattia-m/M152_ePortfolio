@@ -1,9 +1,11 @@
-import { stringify } from "postcss";
-import { getSectionCordinates, scrollTo } from "../helpers/scroll";
 import { sendEmail } from "../helpers/service"
 
 window.formComponent = () => {
     return {
+        /**
+         * @type boolean
+         */
+        formLoad: false,
         /**
          * @type boolean
          */
@@ -59,6 +61,7 @@ window.formComponent = () => {
          * @param {MouseEvent} $event
          */
         async onFormSubmit($event) {
+            this.formLoad = true;
             var demoLoginText = ""
             if (this.form.demoLogin) {
                  demoLoginText = "Wir melden uns für den Demo-Zugang bei dir. \n"
@@ -85,6 +88,7 @@ window.formComponent = () => {
             } else {
                 this.showAlertError("Es ist ein Fehler aufgetreten, bitte schreibe uns ein <u><b><a href='mailto:hi@socialchat.io'>E-Mail</a></b></u> um dich anzumelden.")
             }
+            this.formLoad = false;
         },
         showAlertSuccess(message) {
             this.alertSuccessText = message
