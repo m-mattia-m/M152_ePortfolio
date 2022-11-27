@@ -7,7 +7,7 @@ window.formComponent = () => {
         /**
          * @type boolean
          */
-        alertError: true,
+        alertError: false,
         /**
          * @type boolean
          */
@@ -15,7 +15,7 @@ window.formComponent = () => {
         /**
          * @type string
          */
-        alertErrorText: "Ich bin eine Nachricht.",
+        alertErrorText: "",
         /**
          * @type string
          */
