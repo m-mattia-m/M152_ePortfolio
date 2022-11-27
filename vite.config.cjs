@@ -1,4 +1,9 @@
 /** @type {import('vite').UserConfig} */
 export default {
-  base: ''
+  base: '',
+  server: {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
 };
