@@ -110,12 +110,12 @@
                     <iframe id="aboutVideo" src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </section>
-            <section id="interested" x-ref="interested">
+            <section id="interested" x-ref="interested" x-data="formComponent">
                 <div class="interested">
                     <h1 class="site-headline">
                         Bist du interessiert an SocialChat?
                     </h1>
-                    <form x-data="formComponent">
+                    <form>
                         <div class="form-row">
                             <input type="text" placeholder="Vorname*" x-model="form.firstname" />
                             <span class="form-spacing"></span>
@@ -148,23 +148,23 @@
                         <div class="form-row last-form-row">
                             <button @click.prevent="onFormSubmit">Eintragen</button>
                         </div>
-                        <div class="alert alert-error" x-show="alertError">
-                            <div class="alert-container alert-error-container" role="alert">
-                                <span class="block sm:inline" x-html="alertErrorText"></span>
-                                <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                    </form>
+                    <div class="alert alert-error" x-show="alertError">
+                        <div class="alert-container alert-error-container" role="alert">
+                            <span class="block sm:inline" x-html="alertErrorText"></span>
+                            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                                   <svg @click="alertError = false" class="fill-current h-6 w-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
-                            </div>
                         </div>
-                        <div class="alert alert-success" x-show="alertSuccess">
-                            <div class="alert-container alert-success-container" role="alert">
-                                <span class="block sm:inline" x-html="alertSuccessText"></span>
-                                <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                    </div>
+                    <div class="alert alert-success" x-show="alertSuccess">
+                        <div class="alert-container alert-success-container" role="alert">
+                            <span class="block sm:inline" x-html="alertSuccessText"></span>
+                            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                                   <svg @click="alertSuccess = false" class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                                 </span>
-                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </section>
         </main>
@@ -193,7 +193,7 @@
                 <vl></vl>
             </div>
             <div class="footer-socialmedia">
-                <h3>Social Media</h3>
+                <h3 class="social-media-title">Social Media</h3>
                 <div class="socialmedia-icons">
                     <a href="https://linkedin.com/" target="_blank" rel="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://tiktok.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
