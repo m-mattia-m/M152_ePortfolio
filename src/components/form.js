@@ -90,19 +90,21 @@ window.formComponent = () => {
             this.alertSuccessText = message
             this.alertSuccess = true
             console.log("alert-success")
-            setTimeout(function() {
+
+            setTimeout(() => {
                 this.alertSuccess = false
                 console.log("alert-success - later")
-            }, 5000);
+            }, 5 * 1000);
         },
         showAlertError(message) {
             this.alertErrorText = message
             this.alertError = true
             console.log("alert-error")
-            setTimeout(function() {
+
+            setTimeout(() => {
                 this.alertError = false
                 console.log("alert-error - later")
-            }, 5000);
+            }, 5 * 1000);
         },
     };
 };
