@@ -28,10 +28,11 @@ export async function sendEmail(email, message) {
 }
 
 function replaceUmlauts(s){
-    s.replace("ä","ae");
-    s.replace("ö","oe");
-    s.replace("ü","ue");
-    s.replace("Ä","Ae");
-    s.replace("Ö","Oe");
-    s.replace("Ü","Ue");
+    s = s.replace("ä","ae");
+    s = s.replace("ö","oe");
+    s = s.replace("ü","ue");
+    s = s.replace("Ä","Ae");
+    s = s.replace("Ö","Oe");
+    s = s.replace("Ü","Ue");
+    return s;
 }
