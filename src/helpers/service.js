@@ -13,7 +13,7 @@ export async function sendEmail(email, message) {
         body: JSON.stringify({
             keyword: "socialchat",
             email: email,
-            subject: "Newsletter bestätigung",
+            subject: replaceUmlauts("Newsletter bestätigung"),
             message: message,
             ssl: true,
             contentType: "text/plain; charset=\"utf-8\""
@@ -25,4 +25,13 @@ export async function sendEmail(email, message) {
     .catch((error) => {
         return error
     });
+}
+
+function replaceUmlauts(s){
+    s.replace("ä","ae");
+    s.replace("ö","oe");
+    s.replace("ü","ue");
+    s.replace("Ä","Ae");
+    s.replace("Ö","Oe");
+    s.replace("Ü","Ue");
 }
