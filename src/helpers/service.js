@@ -16,7 +16,7 @@ export async function sendEmail(email, message) {
             subject: "Newsletter bestätigung",
             message: message,
             ssl: true,
-            contentType: "text/plain"
+            contentType: "text/plain; charset=\"utf-8\""
         }),
     })
     .then((data) => {
