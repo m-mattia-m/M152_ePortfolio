@@ -45,6 +45,7 @@ module.exports = {
             },
             transitionDuration: {
                 primary: "500ms",
+                fast: "200ms",
             },
         },
     },
