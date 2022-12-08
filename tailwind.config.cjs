@@ -42,7 +42,10 @@ module.exports = {
             },
             transitionDelay: {
                 primary: "100ms",
-            }
+            },
+            transitionDuration: {
+                primary: "500ms",
+            },
         },
     },
     plugins: [],

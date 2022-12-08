@@ -95,7 +95,7 @@ nav-links,
         @apply bg-[length:0px_3px];
         @apply bg-[0_100%];
         @apply bg-no-repeat;
-        @apply duration-500;
+        @apply duration-primary;
         @apply ease-in-out;
         @apply bg-gradient-to-l;
         @apply from-white;
@@ -132,7 +132,7 @@ nav-logo,
     @apply fill-white;
     @apply ease-in-out;
     @apply delay-primary;
-    @apply duration-500;
+    @apply duration-primary;
 
 }
 
@@ -140,36 +140,36 @@ nav-logo,
     @apply fill-tertiary;
     @apply ease-in-out;
     @apply delay-primary;
-    @apply duration-500;
+    @apply duration-primary;
 }
 
 .SpeakingBubble {
     @apply fill-white;
     @apply ease-in-out;
     @apply delay-primary;
-    @apply duration-500;
+    @apply duration-primary;
 }
 
 .SpeakingBubble-scroll {
     @apply fill-tertiary;
     @apply ease-in-out;
     @apply delay-primary;
-    @apply duration-500;
+    @apply duration-primary;
 }
 
 .SpeakingBubbleLink {
     @apply fill-primary;
     @apply ease-in-out;
     @apply delay-primary;
-    @apply duration-500;
+    @apply duration-primary;
 }
 
 .SpeakingBubbleLink-scroll {
     @apply fill-white;
-    @apply duration-500;
+    @apply duration-primary;
     @apply ease-in-out;
     @apply delay-primary;
-    @apply duration-500;
+    @apply duration-primary;
 }
 
 nav,
@@ -848,7 +848,7 @@ hamburger-row,
     @apply bg-current;
     @apply absolute;
 
-    @apply duration-500;
+    @apply duration-primary;
     @apply delay-primary;
 }
 
@@ -856,7 +856,7 @@ hamburger-row-scroll,
 .hamburger-row-scroll {
     @apply text-tertiary;
 
-    @apply duration-500;
+    @apply duration-primary;
     @apply delay-primary;
 }
 
