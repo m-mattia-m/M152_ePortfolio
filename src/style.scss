@@ -719,6 +719,21 @@ vl {
     @apply text-red-700;
 }
 
+.alert-close-position {
+    @apply absolute;
+    @apply top-0;
+    @apply bottom-0;
+    @apply right-0;
+    @apply px-4;
+    @apply py-3;
+}
+
+.alert-close {
+    @apply fill-current;
+    @apply h-6;
+    @apply w-6;
+}
+
 .donut-container {
     @apply h-[110%];
     @apply absolute;
