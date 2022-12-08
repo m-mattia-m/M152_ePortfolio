@@ -21,9 +21,31 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: '#008334',
-                secondary: '#000000',
-                tertiary: '#f7f7f7',
+                primary: '#8ECAE6',
+                secondary: '#FB8500',
+                tertiary: '#023047',
+            },
+            margin: {
+                "site-default": '10rem',
+                "tablet": '6rem',
+                "mobile": '1.5rem',
+            },
+            padding: {
+                "site-default": '10rem',
+                "tablet": '6rem',
+                "mobile": '1.5rem',
+            },
+            spacing: {
+                "site-default": '10rem',
+                "tablet": '6rem',
+                "mobile": '1.5rem',
+            },
+            transitionDelay: {
+                primary: "100ms",
+            },
+            transitionDuration: {
+                primary: "500ms",
+                fast: "200ms",
             },
         },
     },

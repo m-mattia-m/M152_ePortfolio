@@ -1,20 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ePortfolio</title>
+    <title>SocialChat</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo/favicons/favicon.ico">
 
-    <link rel="stylesheet" href="style.scss" />
+    <link rel="stylesheet" href="./src/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=IBM+Plex+Serif&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/style.scss" />
+
+    <script type="module" src="./src/app.js"></script>
 </head>
 
 <body>
+    <div id="app" x-cloak x-data="homeComponent">
+        <header x-ref="header" id="header">
+            <div class="header-nav">
+                <svg id="nav-logo" class="nav-logo" @click="onLogoClick" width="100%" height="100%" viewBox="0 0 1080 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     xml:space="preserve"
+                     style="clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><rect id="Logo-v6-small"  x="0" y="0" width="1080" height="390"/>
+                    <clipPath id="_clip1"><rect x="0" y="0" width="1080" height="390"/></clipPath>
+                    <g clip-path="url(#_clip1)"><g id="logo-4"><g id="Logo" class="Logo"><g id="Text"><text x="-8.986px" y="182.141px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:248.692px;">Social</text></g><rect
+                            x="465.031" y="101.894" width="34.049" height="184.047"/><g id="Text1" ><text x="267.707px" y="385.878px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:248.692px;">Chat</text></g></g><g
+                            id="Bubble"><clipPath id="_clip2"><rect x="801.984" y="23.588" width="278.016" height="278.016"/></clipPath>
+                        <g clip-path="url(#_clip2)"><path id="SpeakingBubble" class="SpeakingBubble" d="M1080,153.908c0,62.39 -62.228,112.944 -139.008,112.944c-20.145,-0 -39.259,-3.476 -56.526,-9.72c-6.462,4.724 -16.996,11.186 -29.485,16.616c-13.032,5.647 -28.725,10.48 -44.309,10.48c-3.529,-0 -6.679,-2.118 -8.036,-5.376c-1.358,-3.258 -0.597,-6.951 1.846,-9.448l0.163,-0.163c0.163,-0.163 0.38,-0.38 0.706,-0.76c0.597,-0.652 1.52,-1.684 2.661,-3.096c2.226,-2.714 5.212,-6.733 8.253,-11.728c5.43,-9.014 10.589,-20.851 11.62,-34.155c-16.29,-18.462 -25.901,-41.105 -25.901,-65.594c0,-62.391 62.228,-112.944 139.008,-112.944c76.78,-0 139.008,50.553 139.008,112.944Z"/></g>
+                        <g id="SpeakingBubbleLink" class="SpeakingBubbleLink"><path d="M1013.45,153.976c15.758,-15.757 15.758,-41.277 -0,-57.035c-13.945,-13.945 -35.923,-15.758 -51.96,-4.295l-0.446,0.307c-4.016,2.873 -4.936,8.451 -2.064,12.439c2.873,3.988 8.451,4.936 12.439,2.064l0.446,-0.307c8.953,-6.387 21.197,-5.383 28.95,2.399c8.786,8.785 8.786,23.009 0,31.794l-31.292,31.349c-8.786,8.785 -23.01,8.785 -31.795,-0c-7.781,-7.782 -8.785,-20.025 -2.399,-28.95l0.307,-0.446c2.873,-4.017 1.925,-9.595 -2.064,-12.439c-3.988,-2.845 -9.594,-1.925 -12.439,2.063l-0.306,0.447c-11.491,16.009 -9.678,37.986 4.267,51.931c15.758,15.758 41.277,15.758 57.035,0l31.321,-31.321Zm-144.917,-6.526c-15.758,15.758 -15.758,41.278 -0,57.035c13.945,13.946 35.922,15.758 51.959,4.296l0.446,-0.307c4.016,-2.873 4.937,-8.451 2.064,-12.439c-2.873,-3.989 -8.451,-4.937 -12.439,-2.064l-0.446,0.307c-8.953,6.387 -21.197,5.382 -28.95,-2.399c-8.786,-8.813 -8.786,-23.037 -0,-31.822l31.293,-31.321c8.785,-8.785 23.009,-8.785 31.794,-0c7.782,7.781 8.786,20.025 2.399,28.978l-0.307,0.446c-2.873,4.016 -1.924,9.594 2.064,12.439c3.988,2.845 9.594,1.924 12.439,-2.064l0.307,-0.446c11.49,-16.037 9.678,-38.014 -4.267,-51.959c-15.758,-15.758 -41.278,-15.758 -57.036,-0l-31.32,31.32Z"/></g></g></g></g></svg>
+                <nav id="nav">
+                    <div id="responsive-nav-container">
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Start</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Beschreibung</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
+                        <span class="nav-links" @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
+                    </div>
+                </nav>
+                <div @click="openMenu($event)" class="hamburger">
+                    <span :class="menuStatus ? 'translate-y-0 rotate-45' : '-translate-y-2'" class="hamburger-row"></span>
+                    <span :class="menuStatus ? 'opacity-0 translate-x-3' : 'opacity-100'" class="hamburger-row"></span>
+                    <span :class="menuStatus ? 'translate-y-0 -rotate-45' : 'translate-y-2'" class="hamburger-row"></span>
+                </div>
+            </div>
+        </header>
+        <div class="site-nav" id="site-nav">
+            <div class="site-nav-content">
+                <div class="circle" id="circle-home" class="current-section" @click="onNavLinkClick($event, $refs.home, $refs.header)"></div>
+                <div class="circle" id="circle-description" @click="onNavLinkClick($event, $refs.description, $refs.header)"></div>
+                <div class="circle" id="circle-about" @click="onNavLinkClick($event, $refs.about, $refs.header)"></div>
+                <div class="circle" id="circle-interested" @click="onNavLinkClick($event, $refs.interested, $refs.header)"></div>
+            </div>
+        </div>
+        <main>
+            <section id="home" x-ref="home">
+                <div class="home">
+                    <div class="home-title">
+                        <div class="home-title-content">
+                            <h1>SocialChat</h1>
+                            <p>Alle Chats vereint auf einer Plattform.</p>
+                            <button @click="onReadMoreClick($event, $refs.about, $refs.header)">
+                                Mehr
+                            </button>
+                        </div>
+                    </div>
+                    <div class="home-logo">
+                        <img src="./assets/gradient_darkblue.png" alt="SocialChat-Logo" />
+                    </div>
+                </div>
+                <div class="home-triangle-container">
+                    <div class="home-triangle"></div>
+                </div>
+            </section>
+            <section id="description" x-ref="description">
+                <div class="description">
+                    <div class="question question-one" id="questionOne" x-ref="questionOne">
+                        <div class="question-one-description padding-right question-description">
+                            <h1 class="site-headline">Was ist SocialChat?</h1>
+                            <p class="text-description">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class=" question-one-image question-image-container">
+                            <img src="./assets/gradient.png" alt="" class="question-image" />
+                            <div class="image-shadow image-shadow-one"></div>
+                        </div>
+                    </div>
+                    <div class="question question-two" id="questionTwo" x-ref="questionTwo">
+                        <div class="padding-left question-description question-two-description">
+                            <h1 class="site-headline">Was kann SocialChat?</h1>
+                            <p class="text-description">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="question-image-container question-two-image">
+                            <img src="./assets/gradient.png" alt="" class="question-image" />
+                            <div class="image-shadow image-shadow-two"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about" x-ref="about">
+                <div class="about">
+                    <!-- https://stackoverflow.com/questions/51424578/embed-youtube-code-is-not-working-in-html -->
+                    <h1 class="site-headline">Über uns</h1>
+                    <p class="text-description">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                    <!-- rename it to: The Problem | Das Problem-->
+                    <iframe id="aboutVideo" src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="interested" x-ref="interested" x-data="formComponent">
+                <div class="interested">
+                    <h1 class="site-headline">
+                        Bist du interessiert an SocialChat?
+                    </h1>
+                    <form>
+                        <div class="form-row">
+                            <input type="text" placeholder="Vorname*" x-model="form.firstname" />
+                            <span class="form-spacing"></span>
+                            <input type="text" placeholder="Nachname*" x-model="form.lastname" />
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="Firma*" x-model="form.company" />
+                        </div>
+                        <div class="form-row">
+                            <input type="email" placeholder="Email*" x-model="form.email" />
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="Telefon" x-model="form.telephone" />
+                        </div>
+                        <div class="form-row">
+                            <textarea placeholder="Nachricht" x-model="form.message" rows="3"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <label class="checkboxLabel">
+                                <input type="checkbox" x-model="form.demoLogin" />
+                                <p>Ich möchte einen kostenlosen Demo-Zugang erhalten.</p>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="checkboxLabel">
+                                <input type="checkbox" x-model="form.demoPresentation" />
+                                <p>Ich möchte eine kostenlose Demo-Präsentation von Team bekommen.</p>
+                            </label>
+                        </div>
+                        <div class="form-row last-form-row">
+                            <button @click.prevent="onFormSubmit" class="button-submit">
+                                Eintragen
+                            </button>
+                        </div>
+                        <div class="donut-container"  x-show="formLoad">
+                            <svg viewBox="0 0 42 42" class="donut animate-spin">
+                                <!--                            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>-->
+                                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
 
-    <!-- Code -->
+                                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#023047" stroke-width="3" stroke-dasharray="85 200" stroke-dashoffset="25"></circle>
+                            </svg>
+                        </div>
+                    </form>
+                    <div class="alert alert-error" x-show="alertError">
+                        <div class="alert-container alert-error-container" role="alert">
+                            <span class="block sm:inline" x-html="alertErrorText"></span>
+                            <span class="alert-close-position">
+                                  <svg @click="alertError = false" class="alert-close text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                                </span>
+                        </div>
+                    </div>
+                    <div class="alert alert-success" x-show="alertSuccess">
+                        <div class="alert-container alert-success-container" role="alert">
+                            <span class="block sm:inline" x-html="alertSuccessText"></span>
+                            <span class="alert-close-position">
+                                  <svg @click="alertSuccess = false" class="alert-close text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="margin-top">
+            <div class="footer-row">
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Mattia Mügger</p>
+                <p>Hinterdorfstrasse 10</p>
+                <p>CH-9524 Zuzwil SG</p>
+                <br />
+                <a href="tel:+41 79 505 48 28">+41 79 505 48 28</a>
+                <a href="mailto:hi@socialchat.io">hi@socialchat.io</a>
+            </div>
+            <div class="footer-border">
+                <vl></vl>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <span @click="onNavLinkClick($event, $refs.home, $refs.header)">Startseite</span>
+                <span @click="onNavLinkClick($event, $refs.questionOne, $refs.header)">Was ist SocialChat?</span>
+                <span @click="onNavLinkClick($event, $refs.questionTwo, $refs.header)">Was kann SocialChat?</span>
+                <span @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
+                <span @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
+            </div>
+            <div class="footer-border">
+                <vl></vl>
+            </div>
+            <div class="footer-socialmedia">
+                <h3 class="social-media-title">Social Media</h3>
+                <div class="socialmedia-icons">
+                    <a href="https://linkedin.com/" target="_blank" rel="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://tiktok.com/" target="_blank" rel="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://twitter.com/" target="_blank" rel="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            </div>
+            <div class="footer-row">
+                <span>© SocialChat (Mattia Müggler)</span>
+            </div>
+        </footer>
+    </div>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
