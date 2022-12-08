@@ -1,6 +1,3 @@
-import svgUrl from '../../assets/logo/sc-logo_v6_small.svg'
-import blueSvgUrl from '../../assets/logo/sc-logo_v6_small-darkblue.svg'
-
 /**
  * @type int
  */
@@ -46,7 +43,9 @@ export function navChange(hight, padding){
 
   if (hight > padding) {
     console.log("in the screen")
-    document.getElementById("nav-logo").src = blueSvgUrl;
+    document.getElementById("Logo").classList.add("Logo-scroll")
+    document.getElementById("SpeakingBubble").classList.add("SpeakingBubble-scroll")
+    document.getElementById("SpeakingBubbleLink").classList.add("SpeakingBubbleLink-scroll")
 
     document.getElementById("header").classList.add("header-scroll");
     document.getElementById("nav").classList.add("nav-scroll");
@@ -55,11 +54,15 @@ export function navChange(hight, padding){
 
   } else {
     console.log("at the top")
-    document.getElementById("nav-logo").src = svgUrl
+    // document.getElementById("nav-logo").src = svgUrl
     document.getElementById("header").classList.remove("header-scroll");
     document.getElementById("nav").classList.remove("nav-scroll");
     Array.from(document.querySelectorAll('.nav-links-scroll')).forEach((el) => el.classList.remove('nav-links-scroll'));
     Array.from(document.querySelectorAll('.hamburger-row-scroll')).forEach((el) => el.classList.remove('hamburger-row-scroll'));
+
+    document.getElementById("Logo").classList.remove("Logo-scroll")
+    document.getElementById("SpeakingBubble").classList.remove("SpeakingBubble-scroll")
+    document.getElementById("SpeakingBubbleLink").classList.remove("SpeakingBubbleLink-scroll")
   }
 }
 

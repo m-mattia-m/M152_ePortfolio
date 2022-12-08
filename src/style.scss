@@ -123,6 +123,55 @@ nav-logo,
     @apply h-full;
 }
 
+nav-logo,
+.nav-logo {
+    fill: transparent;
+}
+
+.Logo {
+    @apply fill-white;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply duration-500;
+
+}
+
+.Logo-scroll {
+    @apply fill-tertiary;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply duration-500;
+}
+
+.SpeakingBubble {
+    @apply fill-white;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply duration-500;
+}
+
+.SpeakingBubble-scroll {
+    @apply fill-tertiary;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply duration-500;
+}
+
+.SpeakingBubbleLink {
+    @apply fill-primary;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply duration-500;
+}
+
+.SpeakingBubbleLink-scroll {
+    @apply fill-white;
+    @apply duration-500;
+    @apply ease-in-out;
+    @apply delay-primary;
+    @apply duration-500;
+}
+
 nav,
 .nav {
     @apply hidden;
@@ -159,7 +208,7 @@ responsive-nav-container-open-menu,
     @apply text-center;
     @apply justify-around;
     @apply py-60;
-    @apply delay-500;
+    @apply delay-primary;
     @apply ease-in-out;
 }
 
@@ -518,7 +567,7 @@ button,
 
     @apply transition;
     @apply ease-in-out;
-    @apply delay-150;
+    @apply delay-primary;
     @apply hover:scale-110;
 }
 
@@ -798,11 +847,17 @@ hamburger-row,
     @apply h-1;
     @apply bg-current;
     @apply absolute;
+
+    @apply duration-500;
+    @apply delay-primary;
 }
 
 hamburger-row-scroll,
 .hamburger-row-scroll {
     @apply text-tertiary;
+
+    @apply duration-500;
+    @apply delay-primary;
 }
 
 menu-close,
@@ -841,7 +896,7 @@ nav-open-menu,
     @apply fixed;
     @apply top-0;
     @apply left-0;
-    @apply delay-500;
+    @apply delay-primary;
     @apply ease-in-out;
 }
 
