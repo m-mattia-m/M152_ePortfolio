@@ -1,0 +1,119 @@
+# Dokumentation ePortfolio
+
+## Inhaltsverzeichnis
+
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
+- [Einleitung](#einleitung)
+- [Aufgabenstellung](#aufgabenstellung)
+- [Verwendete Tools, Techniken und Hilfsmittel](#verwendete-tools-techniken-und-hilfsmittel)
+- [Multimediaelemente (Bilder, Logo und Video)](#multimediaelemente--bilder-logo-und-video-)
+    - [Wie und wo wurden die jeweiligen Multimediaelemente erstellt?](#wie-und-wo-wurden-die-jeweiligen-multimediaelemente-erstellt)
+    - [Beschreibung und Reflexion der Bearbeitung](#beschreibung-und-reflexion-der-bearbeitung)
+- [Webseite](#webseite)
+    - [Eingesetzte Technik und Erfahrungen](#eingesetzte-technik-und-erfahrungen)
+    - [Probleme, Herausforderungen und Lösungen](#probleme-herausforderungen-und-lösungen)
+- [Start-Probleme](#start-probleme)
+    - [Video-Einbindung](#video-einbindung)
+    - [Formular](#formular)
+      - [Footer](#footer)
+      - [Design](#design)
+      - [Navigation](#navigation)
+      - [Step-Navigation](#step-navigation)
+      - [Responsive](#responsive)
+      - [Konsole-Fehler](#konsole-fehler)
+  - [Gesamtreflexion / Fazit](#gesamtreflexion--fazit)
+
+## Einleitung
+
+## Aufgabenstellung
+
+Es geht darum, ein ePortfolio zu erstellen das diverse Multimedia-Elemente zu einem Produkt zusammenfasst zu erstellen. Hierfür soll zu einem im Voraus bestimmtes Thema eine Webseite erstellt werden in der mind. 3 Bildmanipulationen vorkommen, sowie ein Logo und ein Video das bearbeitet wurde. Dies muss genau dokumentiert werden.
+
+## Verwendete Tools, Techniken und Hilfsmittel
+
+Ich habe ein leeres HTML-Projekt genommen, hierfür habe ich aber Tailwind als Style-Library hinzugefügt und AlpineJS als JavaScript-Library. Um das Web-Package zu generieren habe ich Vite benutzt, welches sehr schnell im generieren eines Web-Package ist. ==...== Für die Multimediabearbeitung habe ich mich für Affinity Photo und Affinity Designer entschieden, da ich beide schon kannte und eine Lizenz dafür hatte. Da ich diese Programme schon kannte, konnte ich damit gut umgehen. Für die Entwicklungsumgebung selbst habe ich mich anfangs für Visual Studio Code und später für Goland entschieden. Der Grund warum ich gewechselt habe war, dass ich Goland angefangen habe zu verwenden da ich sonst viel in Go programmiere und mich an die IDE gewöhnt habe. Vor allem finde ich die benutzung von Git deutlich angenehmer in Goland als in Visual Studio Code.  Um den Emailing-Service zu deployen habe ich mich während der Entwicklung für Docker entschieden, welche ich später auf einer von mir gehosteten Node deployt habe.
+
+## Multimediaelemente (Bilder, Logo und Video)
+
+### Wie und wo wurden die jeweiligen Multimediaelemente erstellt?
+
+Die Multimedia-Elemente wurden in verschiedenen Programmen erstellt. Die Videobearbeitung wurde in ==XXX== gemacht. Für Fotobearbeitung habe ich mich für Affinity Photo entschieden, da ich dieses Programm schon länger habe und ich mittlerweile auch damit umgehen kann. Ich habe mich auch dafür entschieden, da es eine günstige und trotzdem sehr gute Alternative zu Photoshop ist. Bei der Logo-Erstellung habe ich Affinity Designer benutzt, da man mit diesem Programm auch SVG-Dateien erstellen kann und ich wie schon bei dem Bildbearbeitungsprogramme dieses schon kannte und dieselben Argumente dafür habe.
+
+### Beschreibung und Reflexion der Bearbeitung
+
+
+## Webseite
+
+### Eingesetzte Technik und Erfahrungen
+
+Hierfür habe ich mich für eine normale HTML-Seite entschieden welche in NodeJS läuft. Diese habe ich mit Tailwind als Style-Library und AlpineJS als JavaScript-Library aufgewertet. Für die Icons habe ich das Awesome-Font-Package in der kostenlosen Version hinzugefügt. Um das Package zu generieren habe ich Vite in das Projekt hinzugefügt. Tailwind hat den Vorteil dass es nur diese CSS-Klassen exportiert, die auch benötigt werden, das hilft der Webseiten Grösse und somit auch der Geschwindigkeit der Webseite. Für Vite habe ich mich entschieden, da es sehr schnell ist in Webpackages zu generieren und ich es schon länger mal ausprobieren wollte, da ich schon viel davon gehört habe.
+
+### Probleme, Herausforderungen und Lösungen
+
+#### Start-Probleme
+
+Ich hatte diverse Probleme, zum Beispiel kannte ich die wenigsten Technologien, die ich benutzt habe. Im Betrieb und Privat arbeite ich normalerweise im Backend-Bereich, wodurch ich teilweise mühe mit den Technologien hatte, da ich diese nicht kannte. Ich wollte aber nicht einfach eine HTML-Seite mit eigenem CSS und jQuery, darum habe ich mich mit den verschiedenen Technologien auseinandergesetzt. Nach längerem informieren und nach Gesprächen mit Timo Kluser habe ich mich für diese Projekt-Struktur entschieden. Bei welcher mir Timo auch Tipps gegeben und bei der Aufsetzung des Projektes geholfen hat.
+
+#### Video-Einbindung
+
+Da ich das Video über Youtube einbinden wollte, da es eine Vorgabe war und ich die Performance des Hosting nicht kannte, versuchte ich es einzubinden. Hier wurde mir das Video aber nie angezeigt, nur eine Meldung von YouTube, dass ein Fehler bei der Einbindung aufgetreten ist. Nach vielem und langen Probieren merkte ich, dass man bei den Video-Einstellungen in YouTube anwählen muss, dass es über ein iFrame eingebettet werden darf.
+
+#### Formular
+
+Das Formular konnte ich Grafisch relativ schnell erstellen. Jedoch stellte sich noch die Frage wie ich die E-Mails versenden kann, da ich kein PHP zur verfügung hatte. Hierfür habe ich nach verschiedenen Möglichkeiten gesucht und bin unter anderem auf "Netlify Forms" oder "Web3Forms" gestossen. Da es aber Preislich zu teuer war oder nicht so einbinden konnte wie ich das wollte habe ich mich für ein eigenen Service entschieden. Diesen habe ich in Go programmiert, da es meine Beruflich und Private Haupt-Programmiersprache ist. Hier kann ich als Administrator des Services eine Applikation erfassen. Nach dem erfassen wird mir ein Token generiert und zurückgegeben, welcher ich im JavaScript abspeichern konnte. So musste ich keine E-Mail-Anmeldedaten im JavaScript speichern, da dies sonst eine Sicherheitslücke wäre. Wenn jetzt der Endbenutzer das Formular übermittelt wird einen Request an den Service gesendet welcher das E-Mail versendet. Je nach Rückgabe-Status wird mir dann ein Modal angezeigt welches eine Erfolgsmeldung oder eine Fehlermeldung ausgibt.
+
+Ein weiteres Problem, welches ich hatte, war, dass das Modal immer einen Fehler zurückgibt, da ich dieses Modal nicht asynchron aufgerufen habe. Dies war länger ein Problem, da ich es lange versuchte aber es nicht funktionierte. Die Lösung schlussendlich war, dass ich auf den Response wartete und erst nach erhalt des Responses die Meldung anzeigen liess.
+
+Ein drittes Problem war, dass die Meldung nicht automatisch ausgeblendet wurde. Hier hat mich Timo Kluser nach langem suchen daruaf aufmerksam gemacht, dass ich die Timeout-Function nicht als normale Funkton haben darf sondern dass ein eine Arrow-Function daraus machen muss.
+
+#### Footer
+
+Beim Footer wusste ich nicht genau welche Daten ich alle darin speichern wollte. Das Problem war, dass ich zu wenige Informationen fand, welche in den Footer passten und dieser so ziemliche leer wirkte. Schlussendlich habe ich die Adresse, die Navigations und die Social-Media-Kanäle verlinkt. 
+
+Wichtig ist, dass ich hier noch das Copyright eingefügt habe welches nicht im Prototyp war und ich dort vergessen habe. Ich habe es jetzt aber eingefügt, da es ein Kriterium ist.
+
+#### Design
+
+Beim Design hatte ich fast die meisten Probleme. Am Anfang sah es unstrukturiert aus, darum habe ich angefangen eine klare Linie zu halten. ==<Foto mit Linien einzeichnen und einfügen>== Dies wurde mir früher bei einem anderen Projekt von Michael Schädler empfohlen, damit es einheitlicher und strukturierter aussieht.
+
+#### Navigation
+
+Bei der Navigation hatte ich auch mehrere Probleme, zum einen wollte ich, dass es beim scrollen die Farbe ändert und zum anderen wollte ich ein Fullscreen Menü auf Mobile. Das erste Problem habe ich mittels JavaScript gelöst, hier habe ich ein Event-Listener welcher auf das Event 'Scroll' hört und dann überprüft, wo ich mich auf der Webseite befinde und je nachdem die Farb-Klassen auf der Navigation austauscht. Damit das Menü auf der Mobile-Version Fullscreen ist, habe ich ich ein Hamburger-Icon eingefügt, welches nur angezeigt wird, wenn der Bildschirm eine gewisse breite hat. Dies konnte ich mittels CSS-Media-Query beziehungsweise der Tailwind-Variante davon einstellen. Danach blende ich die Navigation in einer anderen Struktur ein, indem ich die Mobile-Navigations-Klassen mit JavaScript den Navigationselementen hinzufüge bei einem Klick auf den Hamburger. Hier hatte ich noch das Problem, dass ich ein Icon von Fontawesome benutzt habe und dieses abgerundet war und das eckige gekostet hätte. Darum hab ich noch lange nach einem alternativen gesucht und auch eines welches animiert ist, dann habe ich anstatt beim X-icon auch noch ein icon hinzuzufügen das selbst mit zwei Div-Containern gelöst und einer kleinen Animation dazwischen. Das Problem war noch die Farbe, wenn man ganz oben auf der Seite war, sollte der Hamburger und das X-Icon weiss sein. Wenn ich aber weiter nach unten geschellt bin, sollte das X-Icon weiterhin weiss sein und der Hamburger sollte dunkelblau sein.
+
+Da ich im Header zuerst ein normales Bild hatte welche mittels JavaScript ausgetauscht wurde, damit das Bild auch während dem scrollen sichtbar bleibt, habe ich es durch ein SVG ersetzt. Das Problem zuerst war, dass ich das SVG nicht bearbeiten konnte, egal ob ich es Image-Tag, als Object-Tag oder sonst wie eingebunden habe. Darum habe ich mich schlussendlich dazu entschieden das SVG direkt ins HTML einzufügen, anstatt von einem externen File hineinzuladen. Danach funktionierte es und ich konnte je nach Scroll-Position die Farben der einzelnen Elemente ändern.
+
+#### Step-Navigation
+
+Hier hatte ich das Problem herauszufinden, in welcher aktuelle Sektion man sich befindet. Das habe ich gelöst, indem ich beim Event listener 'scroll' eine weitere Function aufrufe die, die verschiedenen Navigationen und deren Bildschirmkoordinaten aufruft und mit der aktuellen Scroll-Weite überprüft und je nach dem bei der aktuellen Kreis-Sektion eine weitere Klasse hinzufügt. Dann hatte ich noch das Problem, dass es erst sehr spät wechselt, hierzu habe ich noch mit der Bildschirmhöhe und dem Padding herumgespielt, welche im JavaScript im Vergleich mit eingerechnet werden.
+
+#### Responsive
+
+Die Mobile-Variante ging relativ schnell, jedoch hatte ich noch kleinere Probleme bei der Anordnung, z.B. wenn etwas auf der Desktop-Version nebeneinander war, sollte es jetzt untereinander sein. Hier musste ich noch dafür sorgen, dass das richtige Element zuerst kommt, zum Beispiel zuerst der Titel, dann der Text und zum Schluss das Bild. Hierfür musste ich viel mit der Flex-Direction den einzelnen Elementen Herumprobieren. Ein Problem dabei war auch, dass entweder die falsche Reihenfolge benutzt wurde, oder zum Beispiel beim Formular der Bestätigen-Button die ganze Reihe breit war. Das behob ich, indem ich nur die erste Reihe (Vorname und Nachname) die Flex-Direction änderte.
+
+Nachdem ein grosser Teil der Webseite fertig war, hat mich Timo aufmerksam gemacht, dass es in Tailwind ein Element gibt, welches die Herkömmlichen Media-Queries ersetzt. Darum habe ich nach dem Mobile-First-Prinzip das komplette CSS umgebaut und die einzelne Tailwind-Media-Query-Alternative pro Element eingesetzt. Das war zwar ein wenig mühsam um es umzubauen, jedoch wurde das CSS deutlich lesbarer, schöner und kleiner.
+
+#### Konsole-Fehler
+
+Nach der Einbindung des Youtube-Videos wird von meinem Browser beziehungsweise meinem Adblock verschiedene Tracker des YouTube-Videos blockiert, hierfür werden Fehler in der Konsole verursacht, welche aber keinen Einfluss auf UI/UX haben. Diesen Fehler konnte ich auch nicht beheben, da dieser von dem Adblock verursacht wird und nicht von der Webseite selber.
+
+## Gesamtreflexion / Fazit
+
+Ich fand es ein sehr spannendes Projekt, da ich viele neue Technologien ausprobieren konnte und ein richtiges Ziel hatte, da ich das Thema selbst auswählen konnte. Weiter hatte ich zwischendurch mal Probleme an denen ich lange versucht und ausprobiert habe. Weiter konnte ich meine Frontend-Skills deutlich verbessern, da ich sonst meistens Backend mache. 
+
+---
+
+==headlines umbenennen, da diese aktuell 1:1 vom Aufgaben-stellungs-Dokument genommen wurde==
+
+- https://realfavicongenerator.net/
+
+
+---
+
+
+
+
+---
+
+# Infos falls ich diese nochmals brauche
+
+- https://codepen.io/LarsKlopstra/pen/MWpjNzy?utm_source=alpinejs&utm_medium=email
