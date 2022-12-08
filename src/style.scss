@@ -44,6 +44,8 @@ p {
     @apply first-letter:underline;
     @apply first-letter:underline-offset-8;
 
+    @apply leading-[3rem];
+
     @screen md {
         @apply text-left;
     }
@@ -467,6 +469,18 @@ form {
     @screen md {
         @apply flex-row;
     }
+}
+
+.field {
+    @apply w-full;
+    @apply flex;
+    @apply flex-col;
+}
+
+.required-message {
+    //@apply -mb-[1.25rem];
+    //@apply -mb-5;
+    @apply -mb-6;
 }
 
 .last-form-row {

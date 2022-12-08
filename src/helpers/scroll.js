@@ -32,7 +32,6 @@ addEventListener('scroll', (event) => {
   var hight = window.scrollY;
   navChange(hight, navPadding);
   siteNavChangehight(hight);
-
 });
 
 /**

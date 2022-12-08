@@ -1,6 +1,21 @@
 import {sendEmail} from "../helpers/service"
+import {navChange, navPadding} from "../helpers/scroll.js";
 
 window.formComponent = () => {
+
+    document.getElementById("input-firstname").addEventListener('focus', (event) => {
+        document.getElementById("required-firstname").classList.remove('hidden');
+    });
+    document.getElementById("input-lastname").addEventListener('focus', (event) => {
+        document.getElementById("required-lastname").classList.remove('hidden');
+    });
+    document.getElementById("input-company").addEventListener('focus', (event) => {
+        document.getElementById("required-company").classList.remove('hidden');
+    });
+    document.getElementById("input-email").addEventListener('focus', (event) => {
+        document.getElementById("required-email").classList.remove('hidden');
+    });
+
     return {
         /**
          * @type boolean
