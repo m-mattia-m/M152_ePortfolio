@@ -422,6 +422,10 @@ header {
 .question-one-image {
     @apply mr-3;
     @apply mt-12;
+
+    @screen md {
+        @apply mt-0;
+    }
 }
 
 .question-two {
@@ -431,6 +435,10 @@ header {
 .question-two-image {
     @apply ml-3;
     @apply mt-12;
+
+    @screen md {
+        @apply mt-0;
+    }
 }
 
 .text-description {
