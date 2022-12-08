@@ -473,6 +473,11 @@ form {
     @apply flex-row;
 }
 
+.form-text {
+    @apply text-xs;
+    @apply italic;
+}
+
 input,
 textarea {
     @apply w-full;

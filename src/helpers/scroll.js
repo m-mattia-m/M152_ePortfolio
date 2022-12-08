@@ -21,7 +21,7 @@ export function getSectionCordinates(element) {
 }
 
 /**
- * scroll to
+ * scrollTo
  * @param {ScrollToOptions} scrollOptions
  */
 export function scrollTo(scrollOptions) {
@@ -35,14 +35,13 @@ addEventListener('scroll', (event) => {
 
 });
 
+/**
+ * navChange
+ * @param {number} hight
+ * @param {number} padding
+ */
 export function navChange(hight, padding){
-  var logo = document.getElementById("nav-logo")
-
-  // console.log("hight: " + hight)
-  // console.log("padding: " + padding)
-
   if (hight > padding) {
-    console.log("in the screen")
     document.getElementById("Logo").classList.add("Logo-scroll")
     document.getElementById("SpeakingBubble").classList.add("SpeakingBubble-scroll")
     document.getElementById("SpeakingBubbleLink").classList.add("SpeakingBubbleLink-scroll")
@@ -53,19 +52,21 @@ export function navChange(hight, padding){
     Array.from(document.querySelectorAll('.hamburger-row')).forEach((el) => el.classList.add('hamburger-row-scroll'));
 
   } else {
-    console.log("at the top")
-    // document.getElementById("nav-logo").src = svgUrl
+    document.getElementById("Logo").classList.remove("Logo-scroll")
+    document.getElementById("SpeakingBubble").classList.remove("SpeakingBubble-scroll")
+    document.getElementById("SpeakingBubbleLink").classList.remove("SpeakingBubbleLink-scroll")
+
     document.getElementById("header").classList.remove("header-scroll");
     document.getElementById("nav").classList.remove("nav-scroll");
     Array.from(document.querySelectorAll('.nav-links-scroll')).forEach((el) => el.classList.remove('nav-links-scroll'));
     Array.from(document.querySelectorAll('.hamburger-row-scroll')).forEach((el) => el.classList.remove('hamburger-row-scroll'));
-
-    document.getElementById("Logo").classList.remove("Logo-scroll")
-    document.getElementById("SpeakingBubble").classList.remove("SpeakingBubble-scroll")
-    document.getElementById("SpeakingBubbleLink").classList.remove("SpeakingBubbleLink-scroll")
   }
 }
 
+/**
+ * siteNavChangehight
+ * @param {number} hight
+ */
 function siteNavChangehight(hight){
   var padding = 64;
   var sections = ["home", "description", "about", "interested"];

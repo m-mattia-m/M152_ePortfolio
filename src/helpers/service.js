@@ -1,6 +1,7 @@
 /**
  * send email to the API
- * @param {FormData} from
+ * @param {string} email
+ * @param {string} message
  * @return {json}
  */
 export async function sendEmail(email, message) {
@@ -27,6 +28,11 @@ export async function sendEmail(email, message) {
     });
 }
 
+/**
+ * replaceUmlauts
+ * @param {string} string
+ * @return {string}
+ */
 function replaceUmlauts(s){
     s = s.replace("ä","ae");
     s = s.replace("ö","oe");
