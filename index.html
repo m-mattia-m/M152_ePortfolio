@@ -121,12 +121,13 @@
         </section>
         <section id="about" x-ref="about">
             <div class="about">
-                <h1 class="site-headline">Über uns</h1>
+                <h1 class="site-headline">Problemstellung</h1>
                 <p class="text-description">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                     labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
-                <iframe id="aboutVideo" src="https://youtube.com/embed/YkQDDBI_YXo" title="SocialChat Informationsvideo"
+                <iframe id="aboutVideo" src="https://www.youtube.com/embed/aeqTNClI_xA"
+                        title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -140,31 +141,39 @@
                 <form>
                     <div class="form-row">
                         <div class="field">
-                            <input type="text" placeholder="Vorname*" x-model="form.firstname" id="input-firstname" required class="peer"/>
-                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message" id="required-firstname">Bitte
+                            <input type="text" placeholder="Vorname*" x-model="form.firstname" id="input-firstname"
+                                   required class="peer"/>
+                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message"
+                               id="required-firstname">Bitte
                                 gebe deinen Vornamen
                                 ein.</p>
                         </div>
                         <span class="form-spacing"></span>
                         <div class="field">
-                            <input type="text" placeholder="Nachname*" x-model="form.lastname" id="input-lastname" required class="peer"/>
-                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message" id="required-lastname">Bitte
+                            <input type="text" placeholder="Nachname*" x-model="form.lastname" id="input-lastname"
+                                   required class="peer"/>
+                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message"
+                               id="required-lastname">Bitte
                                 gebe deinen Nachnamen
                                 ein.</p>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="field">
-                            <input type="text" placeholder="Firma*" x-model="form.company" id="input-company" required class="peer"/>
-                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message" id="required-company">Bitte
+                            <input type="text" placeholder="Firma*" x-model="form.company" id="input-company" required
+                                   class="peer"/>
+                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message"
+                               id="required-company">Bitte
                                 gebe den Firmennamen
                                 ein.</p>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="field">
-                            <input type="email" placeholder="Email*" x-model="form.email" id="input-email" required class="peer"/>
-                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message" id="required-email">Bitte
+                            <input type="email" placeholder="Email*" x-model="form.email" id="input-email" required
+                                   class="peer"/>
+                            <p class="hidden invisible peer-invalid:visible text-red-700 font-light required-message"
+                               id="required-email">Bitte
                                 gebe deine E-Mail-Adresse im korrekten Format
                                 an.</p>
                         </div>
