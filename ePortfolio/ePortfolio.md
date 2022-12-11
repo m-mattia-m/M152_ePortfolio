@@ -10,18 +10,23 @@
     - [Wie und wo wurden die jeweiligen Multimediaelemente erstellt?](#wie-und-wo-wurden-die-jeweiligen-multimediaelemente-erstellt)
     - [Beschreibung und Reflexion der Bearbeitung](#beschreibung-und-reflexion-der-bearbeitung)
 - [Webseite](#webseite)
-    - [Eingesetzte Technik und Erfahrungen](#eingesetzte-technik-und-erfahrungen)
-    - [Probleme, Herausforderungen und Lösungen](#probleme-herausforderungen-und-lösungen)
-- [Start-Probleme](#start-probleme)
-    - [Video-Einbindung](#video-einbindung)
-    - [Formular](#formular)
+    - [Eingesetzte Technik und Erfahrungen](#eingesetzte-technik-und-erfahrungen-bei-der-webseite)
+    - [Probleme, Herausforderungen und Lösungen](#probleme-herausforderungen-und-lösungen-bei-der-webseite)
+      - [Start-Probleme](#start-probleme)
+      - [Video-Einbindung](#video-einbindung)
+      - [Formular](#formular)
       - [Footer](#footer)
       - [Design](#design)
       - [Navigation](#navigation)
       - [Step-Navigation](#step-navigation)
       - [Responsive](#responsive)
       - [Konsole-Fehler](#konsole-fehler)
-  - [Gesamtreflexion / Fazit](#gesamtreflexion--fazit)
+- [Video](#video)
+  - [Eingesetzte Technik und Erfahrungen beim Video](#eingesetzte-technik-und-erfahrungen-beim-video)
+  - [Probleme, Herausforderungen und Lösungen beim Video](#probleme-herausforderungen-und-lösungen-beim-video)
+    - [Allgemeine Probleme](#allgemeine-probleme)
+    - [Technische Probleme](#technische-probleme)
+- [Gesamtreflexion / Fazit](#gesamtreflexion--fazit)
 
 ## Einleitung
 
@@ -44,11 +49,11 @@ Die Multimedia-Elemente wurden in verschiedenen Programmen erstellt. Die Videobe
 
 ## Webseite
 
-### Eingesetzte Technik und Erfahrungen
+### Eingesetzte Technik und Erfahrungen bei der Webseite
 
 Hierfür habe ich mich für eine normale HTML-Seite entschieden welche in NodeJS läuft. Diese habe ich mit Tailwind als Style-Library und AlpineJS als JavaScript-Library aufgewertet. Für die Icons habe ich das Awesome-Font-Package in der kostenlosen Version hinzugefügt. Um das Package zu generieren habe ich Vite in das Projekt hinzugefügt. Tailwind hat den Vorteil dass es nur diese CSS-Klassen exportiert, die auch benötigt werden, das hilft der Webseiten Grösse und somit auch der Geschwindigkeit der Webseite. Für Vite habe ich mich entschieden, da es sehr schnell ist in Webpackages zu generieren und ich es schon länger mal ausprobieren wollte, da ich schon viel davon gehört habe.
 
-### Probleme, Herausforderungen und Lösungen
+### Probleme, Herausforderungen und Lösungen bei der Webseite
 
 #### Start-Probleme
 
@@ -96,24 +101,38 @@ Nachdem ein grosser Teil der Webseite fertig war, hat mich Timo aufmerksam gemac
 
 Nach der Einbindung des Youtube-Videos wird von meinem Browser beziehungsweise meinem Adblock verschiedene Tracker des YouTube-Videos blockiert, hierfür werden Fehler in der Konsole verursacht, welche aber keinen Einfluss auf UI/UX haben. Diesen Fehler konnte ich auch nicht beheben, da dieser von dem Adblock verursacht wird und nicht von der Webseite selber.
 
+## Video
+
+### Eingesetzte Technik und Erfahrungen beim Video
+
+Das Video habe ich mit DaVinci Resolve gemacht, da ich zuerst Adobe Premiere Pro und Adobe Premiere Rush ausprobiert habe, aber damit Probleme hatte. Für das Video habe ich zuerst einen kleinen Text aufgeschrieben, welche ich dann ins Mikrofon gesprochen haben. Danach habe ich bei den verschiedenen Themen die ich im Ton gesagt habe, das mit Bilder und Videos unterlegt. Zuerst hatte ich noch Videos, welche ich in echt gemacht habe, jedoch sieht es nicht so gut aus, darum habe ich mich später dazu entschieden die Videos auf dem Bildschirm aufzunehmen, anstatt spezielle Szenen in echt zu benutzen.
+
+### Probleme, Herausforderungen und Lösungen beim Video
+
+#### Allgemeine Probleme
+
+Als estes fand ich es schwierig eine Video-Idee zu bekommen, darum habe ich als erstes geplant, dass ich ein Video über uns mache. Da wir aber kein grosses Team sind, oder sonst was speziell ist, war mir relativ schnell klar, dass es besser ist ein Video über uns SocialChat zu machen. Als ich ein paar Szenen in echt aufgenommen  habe, habe ich beim Schnitt gemerkt, dass es nicht so gut aussieht, da viel nicht so scharf war oder ein wenig verschwommen war. Darum habe ich mich später dazu entschieden Bildschirmaufnahmen zu verwenden.
+
+#### Technische Probleme
+
+Als ich auf der Plattform zu Demozwecken einen Instagram-Account verbinden wollte, hatte ich zuerst Probleme beim Verknüpfen des Facebooks Entwickleraccounts und des Instagramaccounts. Danach hatte ich, dass Problem, dass ich in Facebook eine App registrieren musste für SocialChat, und ich um diese App fertigzustellen einen verifizierten Entwickleraccount brauche und darum entweder Firmendokumente hochladen musste oder meinen Pass. Da ich das nicht wollte, habe ich es nicht verbunden, sondern im Video nur die Registration, Anmeldung und die Erstellung von Teams in SocialChat gezeigt. Twitter müsste man nicht über die Environment-Variablen des Images festsetzen, sondern man könnte sich anmelden, jedoch funktionierte das auch nicht.
+
+Beim Schnitt hatte ich zuerst noch Probleme mit dem Schnittprogramm. Als Erstes habe ich Adobe Premiere Pro benutzt, hier konnte ich aber keine Bilder in Bilder verschieben, ich habe lange gegoogelt, jedoch hiess es da nur, mann kan das Bild anklicken, was bei mir nicht ging. Danach habe ich Adobe Premiere Rush ausprobiert, da ich dachte, ich brauche ja keine special effects, da sollte auch Rush reichen. Jedoch hatte ich das gleiche Problem wie bei der Pro Variante. Als Letztes habe ich DaVinci Resolve ausprobiert wo alles funktionierte. Im Nachhinein hätte ich auch iMovie benutzen können, da es gereicht hat, jedoch hatte ich am anfang die Vorstellung ich könnte ein sehr aufwändiges und mit special effects geschmücktes Video machen.
+
+## Reflexionen
+
+### Bildmanipulation
+
+// TODO: TODO
+
+### Video
+
+Ich fand es interessant, mal auch was anderes als nur programmieren zu machen. Als ich die Videos filmen musste, fand ich es aber über mein Thema schwierig, da es um eine Webapplikation geht. Beim Schnitt ist mir wieder aufgefallen, dass es schwierig ist, ein wirklich gutes Video zu schneiden über eine Plattform. Abschliessend kann ich sagen, ich fand es interessant ein Video zu schneiden, ich bin aber ehrlich gesagt auch froh, dass das nicht zu meiner Haupttätigkeit im Beruf gehört, da ich deutlich lieber und besser programmiere.
+
+### Webseite
+
+Die Webseite zu programmieren fand ich eine sehr coole aufgabe. Wir konnten unser eigenes Thema festlegen und bekamen nicht alles vorgeschrieben. Was auch gut war, war, dass wir die Technologien mehr oder weniger frei wählen konnten. Da ich normalerweise mehr Backend programmiere, fand ich es für mich persönlich gut um auch mal Frontend zu entwickelnd, da ich auch privat viele Ideen was ich programmieren könnte, aber meistens am Frontend scheitert. Ich habe daher auch versucht möglichst Technologien zu benutzen die spannend sind, und mir in Zukunft auch hilfreich sein könnten. Mich würde Vue auch noch interessieren, aber ich dachte, das wäre alles auf einmals evtl. ein wenig viel um im Frontend alles neu zu machen. Da ich auch Vue schon mal ganz kurz angesehen habe, wusste ich von da, dass es nicht wirklich sehr einfach ist in das hinein zu kommen.
+
 ## Gesamtreflexion / Fazit
 
 Ich fand es ein sehr spannendes Projekt, da ich viele neue Technologien ausprobieren konnte und ein richtiges Ziel hatte, da ich das Thema selbst auswählen konnte. Weiter hatte ich zwischendurch mal Probleme an denen ich lange versucht und ausprobiert habe. Weiter konnte ich meine Frontend-Skills deutlich verbessern, da ich sonst meistens Backend mache. 
-
----
-
-==headlines umbenennen, da diese aktuell 1:1 vom Aufgaben-stellungs-Dokument genommen wurde==
-
-- https://realfavicongenerator.net/
-
-
----
-
-
-
-
----
-
-# Infos falls ich diese nochmals brauche
-
-- https://codepen.io/LarsKlopstra/pen/MWpjNzy?utm_source=alpinejs&utm_medium=email
