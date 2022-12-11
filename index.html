@@ -36,8 +36,8 @@
             <nav id="nav">
                 <div id="responsive-nav-container">
                     <span class="nav-links" @click="onNavLinkClick($event, $refs.home, $refs.header)">Start</span>
-                    <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Beschreibung</span>
-                    <span class="nav-links" @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
+                    <span class="nav-links" @click="onNavLinkClick($event, $refs.description, $refs.header)">Details</span>
+                    <span class="nav-links" @click="onNavLinkClick($event, $refs.briefly, $refs.header)">Kurz gesagt</span>
                     <span class="nav-links"
                           @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
                 </div>
@@ -55,7 +55,7 @@
                  @click="onNavLinkClick($event, $refs.home, $refs.header)"></div>
             <div class="circle" id="circle-description"
                  @click="onNavLinkClick($event, $refs.description, $refs.header)"></div>
-            <div class="circle" id="circle-about" @click="onNavLinkClick($event, $refs.about, $refs.header)"></div>
+            <div class="circle" id="circle-briefly" @click="onNavLinkClick($event, $refs.briefly, $refs.header)"></div>
             <div class="circle" id="circle-interested"
                  @click="onNavLinkClick($event, $refs.interested, $refs.header)"></div>
         </div>
@@ -100,16 +100,9 @@
                 </div>
                 <div class="question question-two" id="questionTwo" x-ref="questionTwo">
                     <div class="padding-left question-description question-two-description">
-                        <h1 class="site-headline">Was kann SocialChat?</h1>
+                        <h1 class="site-headline">Wer sind wir?</h1>
                         <p class="text-description">
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                            diam voluptua. At vero eos et accusam
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                            Lorem ipsum dolor sit amet.
+                            Wir sind ein dreiköpfiges Team, die die Idee hatten, eine Plattform für Unternehmen, welche viele Social-Media-Kanäle in einer Plattform verbinden möchten, zur Verfügung stellt. Unser Team besteht aus drei Informatikern, welche die Plattform zur Verfügung stellen. Wir automatisieren die ganze Instandsetzung der Plattform, wodurch ihr schneller die Plattform benutzen könnt.
                         </p>
                     </div>
                     <div class="question-image-container question-two-image">
@@ -119,14 +112,13 @@
                 </div>
             </div>
         </section>
-        <section id="about" x-ref="about">
-            <div class="about">
+        <section id="briefly" x-ref="briefly">
+            <div class="briefly">
                 <h1 class="site-headline">SocialChat in 30 Sekunden</h1>
                 <p class="text-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    In diesem Video beschreiben wir, was SocialChat genau ist. Ebenfalls führen wird die Vorteile von SocialChat auf mit einer kurzen Live-Demo.
                 </p>
-                <iframe id="aboutVideo" src="https://www.youtube.com/embed/aeqTNClI_xA"
+                <iframe id="brieflyVideo" src="https://www.youtube.com/embed/aeqTNClI_xA"
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -253,8 +245,8 @@
                 <h3>Links</h3>
                 <span @click="onNavLinkClick($event, $refs.home, $refs.header)">Startseite</span>
                 <span @click="onNavLinkClick($event, $refs.questionOne, $refs.header)">Was ist SocialChat?</span>
-                <span @click="onNavLinkClick($event, $refs.questionTwo, $refs.header)">Was kann SocialChat?</span>
-                <span @click="onNavLinkClick($event, $refs.about, $refs.header)">Über uns</span>
+                <span @click="onNavLinkClick($event, $refs.questionTwo, $refs.header)">Wer sind wir?</span>
+                <span @click="onNavLinkClick($event, $refs.briefly, $refs.header)">SocialChat in 30 Sekunden</span>
                 <span @click="onNavLinkClick($event, $refs.interested, $refs.header)">Interesse</span>
             </div>
             <div class="footer-border">

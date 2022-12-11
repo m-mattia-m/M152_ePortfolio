@@ -68,7 +68,7 @@ export function navChange(hight, padding){
  */
 function siteNavChangehight(hight){
   var padding = 64;
-  var sections = ["home", "description", "about", "interested"];
+  var sections = ["home", "description", "briefly", "interested"];
   for (var i = 0; i < sections.length; i++){
     var cordinates = getSectionCordinates(document.getElementById(sections[i]));
     if (hight + (((screen.height - padding) / 2) - screen.height) < cordinates.top){
