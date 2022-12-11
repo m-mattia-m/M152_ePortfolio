@@ -69,7 +69,6 @@ window.formComponent = () => {
                 return;
             }
 
-
             this.formLoad = true;
             let demoLoginText = ""
             if (this.form.demoLogin) {

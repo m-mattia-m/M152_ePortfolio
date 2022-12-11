@@ -182,6 +182,7 @@ header {
     @apply delay-primary;
     @apply w-full;
     @apply fixed;
+    @apply z-20;
 }
 
 .responsive-nav-container-open-menu {
@@ -766,7 +767,7 @@ vl {
     @apply absolute;
     @apply left-mobile;
     @apply right-mobile;
-    //@apply my-mobile;
+    @apply z-10;
 
     @apply bg-white;
     @apply bg-opacity-50;
