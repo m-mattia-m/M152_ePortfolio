@@ -26,6 +26,12 @@
   - [Probleme, Herausforderungen und Lösungen beim Video](#probleme-herausforderungen-und-lösungen-beim-video)
     - [Allgemeine Probleme](#allgemeine-probleme)
     - [Technische Probleme](#technische-probleme)
+- [Bilder](#bilder)
+  - [Bildbearbeitung](#bildbearbeitung)
+    - [1. Bild](#1-bild)
+    - [2. Bild](#2-bild)
+    - [3. Bild](#3-bild)
+  - [Probleme, Herausforderungen und Lösungen bei den Bildern](#probleme-herausforderungen-und-lösungen-bei-den-bildern)
 - [Gesamtreflexion / Fazit](#gesamtreflexion--fazit)
 
 ## Einleitung
@@ -119,11 +125,88 @@ Als ich auf der Plattform zu Demozwecken einen Instagram-Account verbinden wollt
 
 Beim Schnitt hatte ich zuerst noch Probleme mit dem Schnittprogramm. Als Erstes habe ich Adobe Premiere Pro benutzt, hier konnte ich aber keine Bilder in Bilder verschieben, ich habe lange gegoogelt, jedoch hiess es da nur, mann kan das Bild anklicken, was bei mir nicht ging. Danach habe ich Adobe Premiere Rush ausprobiert, da ich dachte, ich brauche ja keine special effects, da sollte auch Rush reichen. Jedoch hatte ich das gleiche Problem wie bei der Pro Variante. Als Letztes habe ich DaVinci Resolve ausprobiert wo alles funktionierte. Im Nachhinein hätte ich auch iMovie benutzen können, da es gereicht hat, jedoch hatte ich am anfang die Vorstellung ich könnte ein sehr aufwändiges und mit special effects geschmücktes Video machen.
 
+## Bilder
+
+### Bildbearbeitung
+
+#### 1. Bild
+
+Das erste Bild ist ein Screenshot der Plattform. Da ich kein Messanger einbinden konnte, habe ich selbst eine Nachricht herein editiert, damit es aussieht als ob jemand darüber geschrieben hat. Dafür habe ich einen grauen Hintergrund eingefügt und dann die Eigenschaften der Person eingefügt. Die erste Eigenschaft ist ein Anonymes Profilbild, dann der Name, danach die Nachricht und zum schluss ein Element das darstellen soll, dass die Nachricht noch offen ist. Weiter habe ich die Ecken entfernt und den schwarzen Schatten unten entfernt.
+
+<table>
+  <tr>
+    <th style="width: 33.3%;"> Original </th>
+    <th style="width: 33.3%;"> Bearbeitung </th>
+    <th style="width: 33.3%;"> Vergleich </th>
+  </tr>
+  <tr>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard_original.png"/>
+    </td>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard_edited.png"/>
+    </td>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard.gif"/>
+    </td>
+  </tr>
+</table>
+
+#### 2. Bild
+
+
+
+<table>
+  <tr>
+    <th style="width: 33.3%;"> Original </th>
+    <th style="width: 33.3%;"> Bearbeitung </th>
+    <th style="width: 33.3%;"> Vergleich </th>
+  </tr>
+  <tr>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard_original.png"/>
+    </td>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard_edited.png"/>
+    </td>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard.gif"/>
+    </td>
+  </tr>
+</table>
+
+#### 3. Bild
+
+
+
+<table>
+  <tr>
+    <th style="width: 33.3%;"> Original </th>
+    <th style="width: 33.3%;"> Bearbeitung </th>
+    <th style="width: 33.3%;"> Vergleich </th>
+  </tr>
+  <tr>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard_original.png"/>
+    </td>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard_edited.png"/>
+    </td>
+    <td style="width: 33.3%;">
+      <img src="./src/Images/1-Image/Chatwoot-dashboard.gif"/>
+    </td>
+  </tr>
+</table>
+
+### Probleme, Herausforderungen und Lösungen bei den Bildern
+
+Das grösste Problem war, dass ich nicht das Bild benutzen konnte, welches ich für das Storyboard benutzt habe, da es erstens das falsche Format hat und zweitens, auch wenn ich das Format angepasst habe es nicht wirklich auf die Webseite passte. Darum habe ich es nochmals neu gemacht.
+
 ## Reflexionen
 
 ### Bildmanipulation
 
-// TODO: TODO
+Bei den Bildern hatte ich das Problem, dass ich es schwierig fand ein Bild zu machen, welches ich auch bearbeiten kann. Dafür habe ich beim Dashboard ein neues Element eingefügt. Das Bild, welches ich für das Storyboard gemacht habe, konnte ich leider nicht verwenden, darum habe ich noch ein neues gemacht, was nochmals ein wenig arbeit war, aber das neue sah auf der Webseite deutlich besser aus.
 
 ### Video
 
