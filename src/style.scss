@@ -319,7 +319,7 @@ header {
 
 .home-logo {
     @apply hidden;
-    @apply w-2/4;
+    @apply w-full;
     @apply flex-row;
     @apply items-center;
     @apply justify-end;
@@ -329,9 +329,15 @@ header {
     @screen md {
         @apply flex;
         @apply mr-tablet;
+        @apply hidden;
     }
 
     @screen lg {
+        @apply flex;
+        @apply mr-site-default;
+    }
+
+    @screen xl {
         @apply flex;
         @apply mr-site-default;
     }
