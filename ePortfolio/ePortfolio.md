@@ -154,7 +154,7 @@ Das erste Bild ist ein Screenshot der Plattform. Da ich kein Messanger einbinden
 
 #### 2. Bild
 
-
+Das zweite Bild ist eine Aufnahme, wie ich vor dem Bildschirm sitze und mehrere Chats pflege. Ich habe das gemacht, da mir von Michael Schädler gesagt wurde, dass es meistens authentischer wirkt, wenn Menschen auf dem Bild sind. Für die Bearbeitung habe ich einen Screenshot des Computers hinein editiert, damit man besser erkennen kann, dass ich verschiedene Chats offen habe. Danach habe ich auf dem Screenshot verschiedene Elementen wegeditiert. z.B. habe ich die anderen Konversationen und die bisherigen Chats unsichtbar gemacht. Weiter habe ich die Benutzernamen unkenntlich gemacht und ersetzt mit "SocialChat". Danach habe ich den Schatten der Kabel und des Bildschirmes auf dem Pult entfernt. Ebenso meine Muttermale. Als letztes habe ich den Fernseher und das Möbel entfernt uns stattdessen den Boden und die Wände erweitert. Da ich es zuerst im Hochformat hatte, musste ich das Bild noch ins Querformat bringen und habe dafür unten und oben etwas abgeschnitten.
 
 <table>
   <tr>
@@ -164,13 +164,13 @@ Das erste Bild ist ein Screenshot der Plattform. Da ich kein Messanger einbinden
   </tr>
   <tr>
     <td style="width: 33.3%;">
-      <img src="./src/Images/1-Image/Chatwoot-dashboard_original.png"/>
+      <img src="./src/Images/2-Image/Chats_original.jpeg"/>
     </td>
     <td style="width: 33.3%;">
-      <img src="./src/Images/1-Image/Chatwoot-dashboard_edited.png"/>
+      <img src="./src/Images/2-Image/Chats_edited.png"/>
     </td>
     <td style="width: 33.3%;">
-      <img src="./src/Images/1-Image/Chatwoot-dashboard.gif"/>
+      <img src="./src/Images/2-Image/Chat.gif"/>
     </td>
   </tr>
 </table>
