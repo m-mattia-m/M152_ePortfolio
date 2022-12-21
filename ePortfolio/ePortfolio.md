@@ -6,6 +6,7 @@
 - [Einleitung](#einleitung)
 - [Aufgabenstellung](#aufgabenstellung)
 - [Verwendete Tools, Techniken und Hilfsmittel](#verwendete-tools-techniken-und-hilfsmittel)
+- [Code](#code)
 - [Multimediaelemente (Bilder, Logo und Video)](#multimediaelemente--bilder-logo-und-video-)
     - [Wie und wo wurden die jeweiligen Multimediaelemente erstellt?](#wie-und-wo-wurden-die-jeweiligen-multimediaelemente-erstellt)
     - [Beschreibung und Reflexion der Bearbeitung](#beschreibung-und-reflexion-der-bearbeitung)
@@ -47,6 +48,10 @@ Es geht darum, ein ePortfolio zu erstellen, das diverse Multimedia-Elemente zu e
 ## Verwendete Tools, Techniken und Hilfsmittel
 
 Ich habe ein leeres HTML-Projekt genommen, hierfür habe ich aber Tailwind als Style-Library hinzugefügt und AlpineJS als JavaScript-Library. Um das Web-Package zu generieren, habe ich Vite benutzt, welches sehr schnell beim Generieren eines Web-Package ist. Für die Multimediabearbeitung habe ich mich für Affinity Photo und Affinity Designer entschieden, da ich beide schon kannte und eine Lizenz dafür hatte. Da ich diese Programme schon kannte, konnte ich damit gut umgehen. Für die Entwicklungsumgebung selbst habe ich mich anfangs für Visual Studio Code und später für GoLand entschieden. Der Grund, warum ich gewechselt habe war, dass ich GoLand angefangen habe zu verwenden, da ich sonst viel in Go programmiere und mich an die IDE gewöhnt habe. Vor allem finde ich die Benutzung von Git deutlich angenehmer in GoLand als in Visual Studio Code.  Um den Emailing-Service zu deployen, habe ich mich während der Entwicklung für Docker entschieden, welche ich später auf einer von mir gehosteten Node deployt habe.
+
+## Code
+
+Der originale Code ist auf [Github.com/m-mattia-m/M152_ePortfolio](https://github.com/m-mattia-m/M152_ePortfolio) auf dem Main-Branch verfügbar. Das automatische Deployment wird auf [Github-Pages](https://m-mattia-m.github.io/M152_ePortfolio/) deployt.
 
 ## Multimediaelemente (Bilder, Logo und Video)
 
