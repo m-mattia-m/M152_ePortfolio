@@ -51,7 +51,7 @@ Ich habe ein leeres HTML-Projekt genommen, hierfür habe ich aber Tailwind als S
 
 ## Code
 
-Der originale Code ist auf [Github.com/m-mattia-m/M152_ePortfolio](https://github.com/m-mattia-m/M152_ePortfolio) auf dem Main-Branch verfügbar. Das automatische Deployment wird auf [Github-Pages](https://m-mattia-m.github.io/M152_ePortfolio/) deployt.
+Der originale Code ist auf [Github.com/m-mattia-m/M152_ePortfolio](https://github.com/m-mattia-m/M152_ePortfolio) auf dem Main-Branch verfügbar. Das automatische Deployment wird auf [Github-Pages](https://m-mattia-m.github.io/M152_ePortfolio/) deployt. Das Markdown wo die orginale Fassung dieser Dokumentation ist, ist auch auf [Github.com/m-mattia-m/M152_ePortfolio/ePortfolio/ePortfolio.md](https://github.com/m-mattia-m/M152_ePortfolio/blob/main/ePortfolio/ePortfolio.md) erreichbar
 
 ## Multimediaelemente (Bilder, Logo und Video)
 
