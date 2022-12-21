@@ -177,7 +177,7 @@ Das zweite Bild ist eine Aufnahme, wie ich vor dem Bildschirm sitze und mehrere 
 
 #### 3. Bild
 
-
+Beim dritten Bild haben wir ein Foto von uns gemacht. Für die bearbeitung habe ich zuerst die Spinnenfäden im Hintergrund gelöscht und danach den Schatten an der decke entfernt. Als ich dies hatte, habe ich die Farbintensität geändert und ein wenig damit herumgespielt. Hierbei habe ich als erstes die Belichtung ganz minim erhöht und dann die Farbsättigung. Ganz am Schluss habe ich das Bild noch etwas zugeschnitten, damit es nicht so viel Platz über unseren Köpfen hatte und auf der Seite von Tobias habe ich auch noch den Rand ein wenig entfernt, damit es gleichmässiger ist.
 
 <table>
   <tr>
@@ -187,13 +187,13 @@ Das zweite Bild ist eine Aufnahme, wie ich vor dem Bildschirm sitze und mehrere 
   </tr>
   <tr>
     <td style="width: 33.3%;">
-      <img src="./src/Images/1-Image/Chatwoot-dashboard_original.png"/>
+      <img src="./src/Images/3-Image/About-us_original.jpeg"/>
     </td>
     <td style="width: 33.3%;">
-      <img src="./src/Images/1-Image/Chatwoot-dashboard_edited.png"/>
+      <img src="./src/Images/3-Image/About-us_edited.jpeg"/>
     </td>
     <td style="width: 33.3%;">
-      <img src="./src/Images/1-Image/Chatwoot-dashboard.gif"/>
+      <img src="./src/Images/3-Image/About-us.gif"/>
     </td>
   </tr>
 </table>
