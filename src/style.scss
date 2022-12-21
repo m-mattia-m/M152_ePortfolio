@@ -44,6 +44,8 @@ p {
     @apply first-letter:underline;
     @apply first-letter:underline-offset-8;
 
+    @apply leading-[3rem];
+
     @screen md {
         @apply text-left;
     }
@@ -180,6 +182,7 @@ header {
     @apply delay-primary;
     @apply w-full;
     @apply fixed;
+    @apply z-20;
 }
 
 .responsive-nav-container-open-menu {
@@ -316,7 +319,7 @@ header {
 
 .home-logo {
     @apply hidden;
-    @apply w-2/4;
+    @apply w-full;
     @apply flex-row;
     @apply items-center;
     @apply justify-end;
@@ -326,9 +329,15 @@ header {
     @screen md {
         @apply flex;
         @apply mr-tablet;
+        @apply hidden;
     }
 
     @screen lg {
+        @apply flex;
+        @apply mr-site-default;
+    }
+
+    @screen xl {
         @apply flex;
         @apply mr-site-default;
     }
@@ -339,7 +348,7 @@ header {
 }
 
 .description,
-.about,
+.briefly,
 .interested {
     @apply margin-top;
     @apply w-full;
@@ -422,6 +431,10 @@ header {
 .question-one-image {
     @apply mr-3;
     @apply mt-12;
+
+    @screen md {
+        @apply mt-0;
+    }
 }
 
 .question-two {
@@ -431,6 +444,10 @@ header {
 .question-two-image {
     @apply ml-3;
     @apply mt-12;
+
+    @screen md {
+        @apply mt-0;
+    }
 }
 
 .text-description {
@@ -461,8 +478,25 @@ form {
     }
 }
 
+.field {
+    @apply w-full;
+    @apply flex;
+    @apply flex-col;
+}
+
+.required-message {
+    //@apply -mb-[1.25rem];
+    //@apply -mb-5;
+    @apply -mb-6;
+}
+
 .last-form-row {
     @apply flex-row;
+}
+
+.form-text {
+    @apply text-xs;
+    @apply italic;
 }
 
 input,
@@ -739,7 +773,7 @@ vl {
     @apply absolute;
     @apply left-mobile;
     @apply right-mobile;
-    //@apply my-mobile;
+    @apply z-10;
 
     @apply bg-white;
     @apply bg-opacity-50;
