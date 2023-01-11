@@ -391,6 +391,7 @@ header {
     @apply block;
     @apply w-full;
     @apply -z-10;
+    @apply object-cover;
 }
 
 .question-image-container {
